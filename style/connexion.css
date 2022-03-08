@@ -1,0 +1,15 @@
+
+* {
+margin:0px;
+padding:0px;
+}
+
+html {
+font-family: "Zen Dots Regular";
+}
+
+
+@font-face {
+font-family: "Zen Dots Regular";
+src: url("../zen-dots/ZenDots-Regular.ttf");
+}

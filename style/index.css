@@ -1,0 +1,362 @@
+
+* {
+margin:0px;
+padding:0px;
+}
+
+html {
+font-family: "Zen Dots Regular";
+}
+
+
+@font-face {
+font-family: "Zen Dots Regular";
+src: url("../zen-dots/ZenDots-Regular.ttf");
+}
+
+
+body{
+background: url("style/img/AS-FD.jpg");
+background-size: cover;
+}
+
+
+
+/* CAROUSEL */
+
+.contenu_carou_auto{
+margin:2rem auto;
+width:420px;
+height:279px;
+perspective:8000px;
+margin-top: 10%;
+}
+
+.caroussel-image{
+animation:rotation 12s infinite alternate linear;	
+transform-style:preserve-3d;
+position:relative;	
+}
+
+.caroussel-image img{
+position: absolute;
+top:0;
+left: 0;
+}
+
+.caroussel-image img{
+filter:drop-shadow(0 12px 5px hsla(0,0%,0%,.4));
+width:400px;
+height:266px;
+left:10px;
+outline:1px solid transparent;
+backface-visibility:hidden
+}
+
+.caroussel-image img:nth-child(1){
+transform:translate3d(0,0,495px)
+}
+
+.caroussel-image img:nth-child(2){
+transform:rotateY(45deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(3){
+transform:rotateY(90deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(4){
+transform:rotateY(135deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(5){
+transform:rotateY(180deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(6){
+transform:rotateY(225deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(7){
+transform:rotateY(270deg) translateZ(495px)
+}
+
+.caroussel-image img:nth-child(8){
+transform:rotateY(315deg) translateZ(495px)
+}
+
+@keyframes rotation{
+from{transform:rotatey(0)}
+to{transform:rotatey(0.5turn)}}
+
+
+/* TITRE H1 JEUX */
+
+.h1jeux {
+color: rgb(0, 0, 0);
+margin-top: 8%;
+text-align: center;
+}
+
+
+/* JEUX ICONIQUES */
+
+.jeuxhaut{
+display: flex;
+justify-content: space-around;
+margin-top: 3%;
+
+}
+
+.jeuxhaut img{
+width: 200px;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.jeuxhaut img {
+-webkit-filter: sepia(100%);
+filter: sepia(100%);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+.jeuxhaut:hover img {
+-webkit-filter: sepia(0);
+filter: sepia(0);
+}
+
+
+.jeuxbas{
+display: flex;
+justify-content: space-around;
+margin-top: 7%;
+}
+
+.jeuxbas img{
+width: 200px;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+.jeuxbas img {
+-webkit-filter: sepia(100%);
+filter: sepia(100%);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+.jeuxbas:hover img {
+-webkit-filter: sepia(0);
+filter: sepia(0);
+}
+
+/* TIITRE H1 ABO */
+
+.h1abo  {
+color: rgb(0, 0, 0);
+margin-top: 6%;
+text-align: center;
+}
+
+
+/* CARTE ABONNEMENT */
+
+.abonnements{
+display: flex;
+justify-content: space-around;
+margin-top: 2%;
+} 
+
+.abonnements img {
+border-radius: 10px;
+height: 400px;
+}
+
+.image {
+perspective: 3000px;
+position: absolute;
+transform: translate(-50%, -50%);
+transform-style: preserve-3d;
+display: flex;
+justify-content: space-around;
+margin-left: 80%;
+margin-top: 15%;
+
+}
+
+.image img {
+transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+transition: all .4s;
+transform-style: preserve-3d;
+margin-left: 3%;
+
+
+
+}
+.image:hover img {
+transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+}
+
+
+
+/* TIITRE H1 JDM*/
+
+.h1jdm  {
+color: rgb(0, 0, 0);
+margin-top: 35%;
+text-align: center;
+}
+
+/* LES JEUX DU MOMENTS*/
+
+.lesjdm{
+display: flex;
+justify-content: space-around;
+margin-top: 3%;
+
+}
+
+.lesjdm img{
+width: 250px;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20%;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION DU PRIX + TITRE + AJOUT PANIER LORSQUE JE PASSE SUR L'IMAGE*/
+
+
+
+
+.main-container {
+width: 270px;
+height: 540px;
+position: relative;
+margin: 0 20px;
+}
+
+.poster-container {
+width: 230px;
+position: absolute;
+top: 0;
+left: 20px;
+z-index: 9999;
+}
+
+.poster {
+
+width: 100%;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+height: 300px;
+margin-top: 20%;
+}
+
+
+.ticket-container {
+background: #fff;
+width: 270px;
+height: 520px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 5px;
+position: absolute;
+top: 20px;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+opacity: 0;
+}
+
+.main-container:hover .ticket-container {
+opacity: 1;
+animation: bounceIn 0.6s linear;
+}
+
+
+@keyframes bounceIn {
+0%,
+20%,
+40%,
+60%,
+80%,
+to {
+-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+0% {
+opacity: 0;
+-webkit-transform: scale3d(0.3, 0.3, 0.3);
+transform: scale3d(0.3, 0.3, 0.3);
+}
+20% {
+-webkit-transform: scale3d(1.03, 1.03, 1.03);
+transform: scale3d(1.03, 1.03, 1.03);
+}
+40% {
+-webkit-transform: scale3d(0.9, 0.9, 0.9);
+transform: scale3d(0.9, 0.9, 0.9);
+}
+60% {
+opacity: 1;
+-webkit-transform: scale3d(1.01, 1.01, 1.01);
+transform: scale3d(1.01, 1.01, 1.01);
+}
+80% {
+-webkit-transform: scale3d(0.97, 0.97, 0.97);
+transform: scale3d(0.97, 0.97, 0.97);
+}
+to {
+opacity: 1;
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
+}
+}
+
+
+.ticket__content {
+width: 100%;
+position: absolute;
+bottom: 0;
+text-align: center;
+}
+
+.ticket__movie-title {
+text-transform: uppercase;
+margin-bottom: 5px;
+}
+
+
+.ticket__current-price {
+color: #16c745;
+font-size: 1.4rem;
+font-weight: bold;
+}
+
+.ticket__buy-btn {
+cursor: pointer;
+width: 100%;
+background: #2f2f2f;
+color: rgb(255, 0, 0);
+padding: 15px 0;
+font-size: 1rem;
+font-weight: bold;
+text-transform: uppercase;
+border: 0;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}

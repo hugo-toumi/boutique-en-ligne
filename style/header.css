@@ -1,0 +1,131 @@
+* {
+margin:0px;
+padding:0px;
+}
+
+html {
+font-family: "Zen Dots Regular";
+}
+
+@font-face {
+font-family: "Zen Dots Regular";
+src: url("../zen-dots/ZenDots-Regular.ttf");
+}
+
+
+/********** HEADER **********/
+
+header {
+display: flex;
+justify-content: space-between;
+background-color: #000000;
+height: 100px;
+}
+
+
+/* Header partie droite */
+
+.elementdroite {
+margin-right: 3%;
+}
+
+
+.lidroite {
+list-style: none;
+font-size: 16px;
+padding-top: 10px;
+list-style-type: none;
+}
+
+a {
+text-decoration: none;
+color: #0DA5E6;
+}
+
+
+/* Header partie gauche */
+
+.logo {
+margin-left: 3%;
+width: 200px;
+}
+
+
+
+/* BARRE DE RECHERCHE */
+
+
+
+
+
+/********** NAVBAR *********/
+
+.navcons {
+background-color: rgb(12, 12, 114);
+height: 50px;
+}
+
+.consoles {
+display: flex;
+justify-content: space-between;
+
+}
+
+
+.pcons {
+color: white;
+margin-top: 1%;
+margin-left: 8%;
+}
+
+.imageconsole {
+width: 40px;
+margin-right: 9%;
+margin-top: 0.3%;
+}
+
+
+    
+/* BARRE DE RECHERCHE */
+
+
+.searchform {
+    display: block;
+    margin: 0;
+      margin-top: 0px;
+    overflow: hidden;
+    width: 50%;
+    margin-top: 2%;
+  }
+
+  label, input {
+    vertical-align: baseline;
+    color: #0DA5E6;
+  }
+  label {
+    margin: 0.125em 0.125em 0 0;
+    float: right;
+    
+  }
+  input[type="search"] {
+    border: 2px solid #0DA5E6;
+    background-color: transparent;
+    font: 22px "Open Sans", sans-serif;
+    padding: 0.125em 0.225em;
+    width: 40%;
+    float: left;
+    margin-left: 35%;
+    border-radius: 20px;
+  }
+    
+  input[type="search"]:focus {
+    color: #0DA5E6;
+    border-color: #0DA5E6;
+    outline: none;
+  }
+
+.fa-2x {
+    font-size: 25px;
+padding-right: 150px;
+}
+
