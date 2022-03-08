@@ -1,15 +1,17 @@
 
+<body>  
+
 <?php $header = 'style/header.css';
 require_once('header.php') ?> 
 <link rel="stylesheet" href="style/profil.css">
 
-<body>  
+<main>
 
-    <h1>PROFIL</h1>
+    <h1 class="h1prof">PROFIL</h1>
 
-<?php
+</main>
 
-$footer = 'style/footer.css';
+<?php $footer = 'style/footer.css';
 require_once('footer.php') ?> 
 
 

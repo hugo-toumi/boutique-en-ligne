@@ -13,3 +13,59 @@ font-family: "Zen Dots Regular";
 font-family: "Zen Dots Regular";
 src: url("../zen-dots/ZenDots-Regular.ttf");
 }
+
+
+body{
+background-image: url("../img/uuh.jpg");
+background-image: cover;
+}
+
+.h1conn {
+    margin-top: 5%;
+}
+
+.formi {
+    margin-top: 5%;
+text-align: center;
+
+}
+
+.h1conn{
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+color:  rgb(12, 12, 114);
+font-size: 40px;
+font-family: 'tahoma';
+margin-top: 5%;
+text-align: center;
+}
+
+.h3mdp {
+    margin-top: 3%;
+}
+
+
+#buttoncon {
+margin-top: 10%;
+margin-bottom: 5%;
+}
+
+.inputcon {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    font: 20px "Open Sans", sans-serif;
+    padding: 0.125em 0.225em;
+    width: 15%;
+    text-align: center;
+    color: #ff0000;
+}
+
+.inputmain {
+    border: 2px solid #000000;
+    font: 20px "Open Sans", sans-serif;
+    padding: 0.125em 0.225em;
+    width: 15%;
+    border-radius: 20px;
+    text-align: center;
+    color: #000000;
+}
+

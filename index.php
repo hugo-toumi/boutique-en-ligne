@@ -1,10 +1,11 @@
+<body>
 
 <?php $header = 'style/header.css';
 require_once('header.php') ?>
 <link rel="stylesheet" href="style/index.css">
 
 
-<body>
+<main>
 
         <!-- Carousel -->
 
@@ -72,9 +73,12 @@ require_once('header.php') ?>
                 <img src="img/battefield.jpg" alt="Battelfield 2042">
 
             </div>
+
+</main>
     
 <?php $footer = 'style/footer.css';
 require_once('footer.php') ?>
+
 
 
 </body>
