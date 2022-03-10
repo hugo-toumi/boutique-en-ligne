@@ -22,10 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="gestion_boutique.php" target="_blank">Produit <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="categorie.php" target="_blank">Categorie</a>
+                    <a class="nav-link" href="adminprod.php" target="_blank"> Admin Produit <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -61,6 +58,7 @@
                     <tr>
                         <th>id_membre</th>
                         <th>pseudo</th>
+                        <th>mdp</th>
                         <th>nom</th>
                         <th>prenom</th>
                         <th>email</th>
@@ -80,6 +78,7 @@
                     <tr>
                         <td><?php echo $row['id_membre']; ?></td>
                         <td><?php echo $row['pseudo']; ?></td>
+                        <td><?php echo $row['mdp']; ?></td>
                         <td><?php echo $row['nom']; ?></td>
                         <td><?php echo $row['prenom']; ?></td>
                         <td><?php echo $row['email']; ?></td>
@@ -119,6 +118,10 @@
                 <div class="form-group">
                     <label>Pseudo</label>
                     <input type="text" name="pseudo" class="form-control" value="<?php echo $pseudo; ?>" placeholder="Entrez votre pseudo">
+                </div>
+                <div class="form-group">
+                    <label>Mot de Passe</label>
+                    <input type="password" name="mdp" class="form-control" value="<?php echo $mdp; ?>" placeholder="Entrez votre pseudo">
                 </div>
                 <div class="form-group">
                     <label>Nom</label>
