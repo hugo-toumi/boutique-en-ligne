@@ -17,8 +17,10 @@ src: url("../zen-dots/ZenDots-Regular.ttf");
 
 
 body{
-background-image: url("../img/ohohoh.jpg");
+
+background-image: url("../img/test22.jpg");
 }
+
 
 
 .h1inscri{
@@ -48,11 +50,11 @@ justify-content: space-around;
 label {
 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
 color:  rgb(0, 0, 0);
-padding: 15px;
+
 }
 
 
-input {
+input[type=text],[type=password],[type=email] {
 border: 2px solid #000000;
 font: 20px "Open Sans", sans-serif;
 border-radius: 20px;
@@ -60,38 +62,39 @@ text-align: center;
 color: #000000;
 width: 100%;
 padding: 2px;
+margin-bottom: 12%;
 }
 
 
 .info {
-    text-align: center; 
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
-    display: inline-grid;
-    background-color: #56661b70;
-    padding: 20px;
-    border-radius: 10%;
+text-align: center; 
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+display: inline-grid;
+background-color: #56661b70;
+padding: 20px;
+border-radius: 10%;
 }
 
 
 .connexion {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
-    display: inline-grid;
-    background-color: #0a381849;
-    padding: 20px;
-    border-radius: 10%;
+text-align: center;
+color: rgb(0, 0, 0);
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+display: inline-grid;
+background-color: #0a381849;
+padding: 20px;
+border-radius: 10%;
 }
 
 
 .adresse{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
-    display: inline-grid;
-    background-color: #183c5e62;
-    padding: 20px;
-    border-radius: 10%;
+text-align: center;
+color: rgb(0, 0, 0);
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+display: inline-grid;
+background-color: #183c5e62;
+padding: 20px;
+border-radius: 10%;
 }
 
 .pseudo {
@@ -122,4 +125,3 @@ color: #fff;
 }
 
 
-    

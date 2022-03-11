@@ -9,23 +9,25 @@ require_once('header.php') ?>
 
 <h1 class="h1conn">CONNEXION</h1>
 
-        <div class="conni">
+      
 
                 <form method ="post" action = "connexion.php" class="formi">
 
+                <div class="conni">
+
                     <label>EMAIL</label> 
-                    <input type="text" name="login" placeholder='Arthur@gmail.com' required>
+                    <input type="email" name="login" placeholder='Arthur@gmail.com' required>
                 
                     <label>MOT DE PASSE </label> 
                     <input type="password" name="password" placeholder='*****' required>
 
-                    </div>
+                </div>
 
                     <div id="buttoncon"> <input class="inputinside" type="submit"value="Se connecter"> </div> 
 
                 </form> 
 
-        </div>
+ 
 
 
         </main>

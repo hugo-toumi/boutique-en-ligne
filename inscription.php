@@ -31,7 +31,7 @@ require_once('header.php') ?>
                 <div class="connexion">
 
                     <label>EMAIL</label> 
-                    <input type="text" name="login" placeholder='Arthur@gmail.com' required>
+                    <input type="email" name="login" placeholder='Arthur@gmail.com' required>
 
                     <label>MOT DE PASSE</label> 
                     <input type="password" name="password" placeholder='*****' required>

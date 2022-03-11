@@ -7,7 +7,7 @@ if($resultat->num_rows <= 0) { header("location:boutique.php"); exit(); }
 $produit = $resultat->fetch_assoc();
 $contenu .= "<h2>Titre : $produit[titre]</h2><hr><br>";
 $contenu .= "<p>Categorie: $produit[categorie]</p>";
-$contenu .= "<p>Couleur: $produit[couleur]</p>";
+$contenu .= "<p>sous_categorie: $produit[sous_categorie]</p>";
 $contenu .= "<p>Taille: $produit[taille]</p>";
 $contenu .= "<img src='$produit[photo]' ='150' height='150'>";
 $contenu .= "<p><i>Description: $produit[description]</i></p><br>";
