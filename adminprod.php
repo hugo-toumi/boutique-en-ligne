@@ -60,6 +60,7 @@
                         <th>reference</th>
                         <th>categorie</th>
                         <th>sous_categorie</th>
+                        <th>photo</th>
                         <th>titre</th>
                         <th>description</th>
                         <th>taille</th>
@@ -78,6 +79,7 @@
                         <td><?php echo $row['reference']; ?></td>
                         <td><?php echo $row['categorie']; ?></td>
                         <td><?php echo $row['sous_categorie']; ?></td>
+                        <td><?php echo $row['photo']; ?></td>
                         <td><?php echo $row['titre']; ?></td>
                         <td><?php echo $row['description']; ?></td>
                         <td><?php echo $row['taille']; ?></td>
@@ -123,6 +125,11 @@
                 <div class="form-group">
                     <label>Sous Categorie</label>
                     <input type="text" name="sous_categorie" class="form-control" value="<?php echo $sous_categorie; ?>" placeholder="Entrez votre sous categorie">
+                </div>
+
+                <div class="form-group">
+                    <label>Photo</label>
+                    <input type="text" name="photo" class="form-control" value="<?php echo $photo; ?>" placeholder="Entrez le lien de la photo">
                 </div>
         
                 <div class="form-group">
