@@ -14,7 +14,8 @@
                     <!-- HEADER LOGO GAUCHE + FONCTIONNALITE DROITE -->
     <header>
 
-        <img class="logo" src="img/GM.png" alt="Logo Gameland">
+    <!-- <a href="index.php">  -->
+ <img  class="logo" src="img/GM.png" alt="Logo Gameland">
         
 
                     <!-- BARRE DE RECHERCHE -->
@@ -22,15 +23,14 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
             <form class="searchform group">
-                <label for="search-box">
+                <label class="labelbarre" for="search-box">
                 <span class="fa fa-2x fa-search"></span>
                 </label>
-                <input type="search" id="search-box" placeholder=" Recherche...">
+                <input class="inputbarre" type="search" id="search-box" placeholder=" Recherche...">
             </form>
+                    
 
             <div class="elementdroite">
-
-
 
                 <ul>
 
@@ -70,6 +70,7 @@
 
 
 
+<!-- PHP PARTIE DROITE HEADER -->
 
     <!-- <?php
  
@@ -89,6 +90,11 @@
 
     ?> -->
 
+
+
+
+
+	
 
 
 

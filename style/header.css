@@ -91,16 +91,16 @@ margin-top: 0.3%;
     margin-top: 2%;
   }
 
-  label, input {
+  .labelbarre, input {
     vertical-align: baseline;
     color: #0DA5E6;
   }
-  label {
+  .labelbarre {
     margin: 0.125em 0.125em 0 0;
     float: right;
     
   }
-  input[type="search"] {
+  .inputbarre[type="search"] {
     border: 2px solid #0DA5E6;
     background-color: transparent;
     font: 22px "Open Sans", sans-serif;
@@ -111,7 +111,7 @@ margin-top: 0.3%;
     border-radius: 20px;
   }
     
-  input[type="search"]:focus {
+  .inputbarre[type="search"][type="search"]:focus {
     color: #0DA5E6;
     border-color: #0DA5E6;
     outline: none;

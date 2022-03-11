@@ -74,12 +74,33 @@ require_once('header.php') ?>
 
             </div>
 
+            
+<!-- ANIMATION CARTE -->
+
+		<div class="main-box">
+			<div class="poster-box"><a href="#"><img src="./img/bo2.jpg" class="jeu" /></a></div>
+			    <div class="ticket-container">
+				    <div class="ticket__content">
+
+                        <h4 class="titre">Black Ops 2</h4>
+                        <p class="prix">18.00€</p>
+                        <button class="panier">Ajouter au panier</button>
+
+				    </div>
+			    </div>
+		</div>
+
+
 </main>
+
+
+
+
     
 <?php $footer = 'style/footer.css';
 require_once('footer.php') ?>
 
-
-
 </body>
 </html>
+
+
