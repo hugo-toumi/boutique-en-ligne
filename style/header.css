@@ -46,10 +46,11 @@ color: #0DA5E6;
 /* Header partie gauche */
 
 .logo {
-margin-left: 3%;
-width: 200px;
+  margin-left: 30%;
+  width: 15em;
+  height: 100%;
+  transform: scale(1, 2);
 }
-
 
 /********** NAVBAR *********/
 
@@ -66,7 +67,7 @@ justify-content: space-between;
 
 
 .pcons {
-color: white;
+color: rgb(255, 255, 255);
 margin-top: 1%;
 margin-left: 8%;
 }
@@ -78,47 +79,57 @@ margin-top: 0.3%;
 }
 
 
-    
-/* BARRE DE RECHERCHE */
+    /* BARRE DE RECHERCHE */
 
 
-.searchform {
-    display: block;
-    margin: 0;
-      margin-top: 0px;
-    overflow: hidden;
-    width: 50%;
-    margin-top: 2%;
-  }
-
-  .labelbarre, input {
-    vertical-align: baseline;
-    color: #0DA5E6;
-  }
-  .labelbarre {
-    margin: 0.125em 0.125em 0 0;
-    float: right;
-    
-  }
-  .inputbarre[type="search"] {
-    border: 2px solid #0DA5E6;
-    background-color: transparent;
-    font: 22px "Open Sans", sans-serif;
-    padding: 0.125em 0.225em;
-    width: 40%;
-    float: left;
-    margin-left: 35%;
-    border-radius: 20px;
-  }
-    
-  .inputbarre[type="search"][type="search"]:focus {
-    color: #0DA5E6;
-    border-color: #0DA5E6;
-    outline: none;
-  }
-
-.fa-2x {
-    font-size: 25px;
-padding-right: 150px;
+.searchBox {
+  position: absolute;
+  left: 50%;
+  transform:  translate(-50%,50%);
+  background: #0DA5E6;
+  border-radius: 40px;
+  padding: 5px;
 }
 
+.searchBox:hover > .searchInput {
+  width: 240px;
+}
+
+.searchBox:hover > .searchButton {
+background: rgb(0, 0, 0);
+color : #0DA5E6;
+}
+
+.searchButton {
+  color: rgb(0, 0, 0);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0DA5E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:left;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}

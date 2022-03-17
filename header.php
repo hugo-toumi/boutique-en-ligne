@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameLand.fr</title>
     <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="<?php echo $header; ?>">
+
     <script src="https://kit.fontawesome.com/736e958a4d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,20 +14,23 @@
                     <!-- HEADER LOGO GAUCHE + FONCTIONNALITE DROITE -->
     <header>
 
-    <!-- <a href="index.php">  -->
- <img  class="logo" src="img/GM.png" alt="Logo Gameland">
+    <a href="index.php"> <img  class="logo" src="img/GM.png" alt="Logo Gameland"></a>
+
         
 
                     <!-- BARRE DE RECHERCHE -->
 
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-            <form class="searchform group">
-                <label class="labelbarre" for="search-box">
-                <span class="fa fa-2x fa-search"></span>
-                </label>
-                <input class="inputbarre" type="search" id="search-box" placeholder=" Recherche...">
-            </form>
+        <div class="searchBox">
+
+            <input class="searchInput"  placeholder="Recherche ...">
+            
+                <button class="searchButton" href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+        </div>
+
+                    <!--  -->
                     
 
             <div class="elementdroite">
@@ -52,7 +55,6 @@
 
     <nav class="navcons">
             <div class="consoles"> 
-
                
                 <p class="pcons">Playstation</p><img class="imageconsole" src="https://img.icons8.com/color/48/000000/play-station.png"/> <!-- Icon PLAYSTATION-->
                 

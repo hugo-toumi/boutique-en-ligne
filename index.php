@@ -1,7 +1,6 @@
 <body>
 
-<?php $header = 'style/header.css';
-require_once('header.php') ?>
+<?php require_once('header.php') ?>
 <link rel="stylesheet" href="style/index.css">
 
 
@@ -78,13 +77,13 @@ require_once('header.php') ?>
 <!-- ANIMATION CARTE -->
 
 		<div class="main-box">
-			<div class="poster-box"><a href="#"><img src="./img/bo2.jpg" class="jeu" /></a></div>
+			<div class="poster-box"><a href="fiche_produit.php"><img src="./img/bo2.jpg" class="jeu" /></a></div>
 			    <div class="ticket-container">
 				    <div class="ticket__content">
 
                         <h4 class="titre">Black Ops 2</h4>
                         <p class="prix">18.00€</p>
-                        <button class="panier">Ajouter au panier</button>
+                        <a href="panier.php"><button class="panier">Ajouter au panier</button></a>
 
 				    </div>
 			    </div>
@@ -94,11 +93,7 @@ require_once('header.php') ?>
 </main>
 
 
-
-
-    
-<?php $footer = 'style/footer.css';
-require_once('footer.php') ?>
+<?php require_once('footer.php') ?>
 
 </body>
 </html>

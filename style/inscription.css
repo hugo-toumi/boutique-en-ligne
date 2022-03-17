@@ -17,10 +17,8 @@ src: url("../zen-dots/ZenDots-Regular.ttf");
 
 
 body{
-
 background-image: url("../img/test22.jpg");
 }
-
 
 
 .h1inscri{
@@ -50,7 +48,6 @@ justify-content: space-around;
 label {
 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
 color:  rgb(0, 0, 0);
-
 }
 
 
@@ -97,19 +94,10 @@ padding: 20px;
 border-radius: 10%;
 }
 
-.pseudo {
-margin-top: 2%;
-text-align: center;
-padding-left: 40%;
-padding-right: 40%;
-
-}
-
-
 
 #buttoncon {
 text-align: center;
-margin-top: 6%;
+margin-top: 4%;
 margin-bottom: 5%;
 border-radius: 10%;
 }
