@@ -1,7 +1,5 @@
 <?php  
 
-session_start();
-
 $bdd = new PDO('mysql:host=localhost;dbname=boutique-en-ligne;charset=utf8', 'root','');
 
 ?>

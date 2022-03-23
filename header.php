@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,27 +29,62 @@
                 <button class="searchButton" href="#">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
+                
         </div>
 
-                    <!--  -->
-                    
+     
 
-            <div class="elementdroite">
+                        <!-- Quand je suis connecté -->
+                
 
-                <ul>
+               <?php if(isset($_SESSION['id_membre'])):?> 
 
-                    <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
-                    <a href="inscription.php" >INSCRIPTION | <a href="connexion.php"> CONNEXION</a></li> 
+                        <li class="lidroite"><i class="fa-solid fa-right-from-bracket" style="color:red"></i> <!-- Icon DECONNEXION-->
+                        <a class="deco" href="deconnexion.php">DÉCONNEXION</a></li>
 
-                    <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                    <a href="histoire.php">NOTRE HISTOIRE</a></li> 
+                <div class="connect">
 
-                    <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
-                    <a href="panier.php">PANIER</a></li> 
+                        <ul>
 
-                </ul>
+                            <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
+                            <a href="profil.php">MON PROFIL</a></li>
 
-        </div>
+                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
+                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+
+                            <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
+                            <a href="panier.php">PANIER</a></li>
+
+
+                        </ul>
+
+                </div>
+
+
+                <?php else :?>
+            
+
+                        // ! Quand je ne suis pas connecté
+
+                <div class="noconnect">
+
+                        <ul>
+
+                            <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
+                            <a href="inscription.php">INSCRIPTION | </a><a href="connexion.php">CONNEXION</a></li>
+
+                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
+                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+
+                            <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
+                            <a href="panier.php">PANIER</a></li>
+
+                        </ul>
+
+                </div>
+
+
+                <?php endif ?>
 
     </header>
 

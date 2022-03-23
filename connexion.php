@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include 'connect.php';
 
 if (isset($_POST['connexion'])) {
@@ -23,6 +25,7 @@ if (isset($_POST['connexion'])) {
 
             $_SESSION['email'] = $userinfo['email'];
             $_SESSION['mdp'] = $userinfo['mdp'];
+            $_SESSION['id_membre'] = $userinfo['id_membre'];
 
             header('Location: profil.php');
         } else {
@@ -42,9 +45,11 @@ if (isset($_POST['connexion'])) {
 
 
         <h1 class="h1conn">CONNEXION</h1>
+
         <?php if (isset($erreur)) {
-            echo '<font color="red">' . $erreur . "</font>";
+        echo "<div class='erreur'>" . $erreur . "</div";
         } ?>
+
         <form method="post" action="connexion.php" class="formi">
 
             <div class="conni">

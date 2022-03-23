@@ -1,6 +1,7 @@
 <body>
-
-<?php require_once('header.php') ?>
+<?php
+session_start();
+require_once('header.php') ?>
 <link rel="stylesheet" href="style/index.css">
 
 
