@@ -19,7 +19,7 @@ if (isset($_POST['suscribe'])) {
 
     $valid = (boolean) true;
 
-    // CHECK EMAIL ----------
+    // EMAIL
 
     $reqmail = $bdd->prepare("SELECT * FROM membre WHERE email =:email");
     $reqmail->setFetchMode(PDO::FETCH_ASSOC);
@@ -45,7 +45,7 @@ if (isset($_POST['suscribe'])) {
     }
 
 
-    // CHECK PRENOM/NOM ------
+    // PRENOM
 
     if (empty($prenom)) {
         $valid = false;
@@ -58,6 +58,8 @@ if (isset($_POST['suscribe'])) {
         $prenom ="";
     }
 
+     // NOM
+
     if (empty($nom)) {
         $valid = false;
         $err_nom = "Renseignez votre nom.";
@@ -69,7 +71,7 @@ if (isset($_POST['suscribe'])) {
         $nom ="";
     }
 
-    // check mdp  ------
+    // MOT DE PASSE
 
     if (empty($mdp)) {
         $valid = false;
@@ -89,11 +91,11 @@ if (isset($_POST['suscribe'])) {
 
     elseif ($mdp !== $mdpconfirm) {
         $valid = false;
-        $err_mdpconfirm = "Les mots de passe ne correspondent pas.";
+        $err_mdpconfirm = "Les mots de passe ne sont pas identiques.";
         $mdpconfirm ="";
     }
 
-    // check pseudo
+    // PSEUDO
 
     if (empty($pseudo)) {
         $valid = false;
@@ -101,7 +103,7 @@ if (isset($_POST['suscribe'])) {
     }
 
 
-    // check ville
+    // VILLE
 
     if (empty($ville)) {
         $valid = false;
@@ -114,7 +116,7 @@ if (isset($_POST['suscribe'])) {
         $ville ="";
     }
 
-    // check codepostal
+    // CODE POSTALE
 
     if (empty($code_postale)) {
         $valid = false;
@@ -124,14 +126,13 @@ if (isset($_POST['suscribe'])) {
     elseif (!preg_match ("~^[0-9]{5}$~",$code_postale)) {
         $valid = false;
         $code_postale ='';
-        $err_code_postale = "Le code postal n'est pas au bon format";
+        $err_code_postale = "Le code postal n'est pas au bon format.";
     }
 
-    // check adresse
+    // ADRESSE
 
     if (empty($adresse)) {
         $valid = false;
-        $err_adresse ="Renseignez votre adresse..";
     }
 
 

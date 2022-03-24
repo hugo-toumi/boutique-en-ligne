@@ -58,15 +58,11 @@
 
                         </ul>
 
-                </div>
-
 
                 <?php else :?>
             
 
                         // ! Quand je ne suis pas connecté
-
-                <div class="noconnect">
 
                         <ul>
 

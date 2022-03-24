@@ -29,7 +29,7 @@ if (isset($_POST['connexion'])) {
 
             header('Location: profil.php');
         } else {
-            $erreur = "Mauvais mail ou mot de passe !";
+            $erreur = "Email ou Mot de passe incorrect !";
         }
     }
 }
@@ -46,12 +46,13 @@ if (isset($_POST['connexion'])) {
 
         <h1 class="h1conn">CONNEXION</h1>
 
-        <?php if (isset($erreur)) {
-        echo "<div class='erreur'>" . $erreur . "</div";
-        } ?>
 
-        <form method="post" action="connexion.php" class="formi">
+        <form method="post" action="" class="formi">
 
+            <?php if (isset($erreur)) {
+            echo "<div class='erreur'>" . $erreur . "</div";
+            } ?>
+            
             <div class="conni">
 
                 <label>EMAIL</label>
@@ -64,7 +65,10 @@ if (isset($_POST['connexion'])) {
 
             <div id="buttoncon"> <input class="inputinside" type="submit" name="connexion" value="Se connecter"> </div>
 
+            
         </form>
+
+    
 
     </main>
 
