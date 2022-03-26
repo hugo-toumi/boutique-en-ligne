@@ -46,29 +46,23 @@ if (isset($_POST['connexion'])) {
 
         <h1 class="h1conn">CONNEXION</h1>
 
-
         <form method="post" action="" class="formi">
-
-            <?php if (isset($erreur)) {
-            echo "<div class='erreur'>" . $erreur . "</div";
-            } ?>
+            
             
             <div class="conni">
+                <?php if (isset($erreur)) {echo "<div class='error'>" . $erreur . "</div";} ?>
 
                 <label>EMAIL</label>
                 <input type="email" name="email" placeholder='Arthur@gmail.com'>
-
+                
                 <label>MOT DE PASSE </label>
                 <input type="password" name="mdp" placeholder='*****'>
-
             </div>
 
             <div id="buttoncon"> <input class="inputinside" type="submit" name="connexion" value="Se connecter"> </div>
 
             
         </form>
-
-    
 
     </main>
 

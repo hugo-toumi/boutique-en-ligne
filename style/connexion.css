@@ -91,3 +91,8 @@ cursor: pointer;
 
 
 
+.error {
+    color: red;
+    font-size: 16px; 
+    font-family: tahoma, arial, helvetica;
+}

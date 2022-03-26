@@ -182,15 +182,15 @@ require_once('header.php');?>
                 <div class="info">
 
                     <label>PRENOM</label>
-                    <?php if (isset($err_prenom)) {echo "<div class='err_form'> $err_prenom<div>";}?>
+                    <?php if (isset($err_prenom)) {echo "<div class='error'> $err_prenom</div>";}?>
                     <input type="text" name="prenom" placeholder='Adam' required>
 
                     <label>NOM</label> 
-                    <?php if (isset($err_nom)) {echo "<div class='err_form'> $err_nom<div>";}?>
+                    <?php if (isset($err_nom)) {echo "<div class='error'> $err_nom</div>";}?>
                     <input type="text" name="nom" placeholder='James' required>
                 
                     <label>PSEUDO</label>
-                    <?php if (isset($err_pseudo)) {echo "<div class='err_form'> $err_pseudo<div>";}?>
+                    <?php if (isset($err_pseudo)) {echo "<div class='error'> $err_pseudo</div>";}?>
                     <input type="text" name="pseudo" placeholder='_Gustavo_' required>
               
                 </div>
@@ -199,15 +199,15 @@ require_once('header.php');?>
                 <div class="connexion">
 
                     <label>EMAIL</label>
-                    <?php if (isset($err_email)) {echo "<div class='err_form'> $err_email<div>";}?> 
+                    <?php if (isset($err_email)) {echo "<div class='error'> $err_email<div>";}?> 
                     <input type="email" name="email" placeholder='Adam@gmail.com' required>
 
                     <label>MOT DE PASSE</label> 
-                    <?php if (isset($err_mdp)) {echo "<div class='err_form'> $err_mdp<div>";}?>
+                    <?php if (isset($err_mdp)) {echo "<div class='error'> $err_mdp</div>";}?>
                     <input type="password" name="mdp" placeholder='*****' required>
 
                     <label>CONFIRMATION MOT DE PASSE</label> 
-                    <?php if (isset($err_mdpconfirm)) {echo "<div class='err_form'> $err_mdpconfirm<div>";}?>
+                    <?php if (isset($err_mdpconfirm)) {echo "<div class='error'> $err_mdpconfirm</div>";}?>
                     <input type="password" name="mdpconfirm" placeholder='*****' required>
                
                 </div>
@@ -216,15 +216,15 @@ require_once('header.php');?>
                 <div class="adresse">
 
                     <label>ADRESSE</label>
-                    <?php if (isset($err_adresse)) {echo "<div class='err_form'> $err_adresse<div>";}?> 
+                    <?php if (isset($err_adresse)) {echo "<div class='error'> $err_adresse</div>";}?> 
                     <input type="text" name="adresse" placeholder='36 rue des orfèvres' required>
                   
                     <label>CODE POSTALE</label> 
-                    <?php if (isset($err_code_postale)) {echo "<div class='err_form'> $err_code_postale<div>";}?>
+                    <?php if (isset($err_code_postale)) {echo "<div class='error'> $err_code_postale</div>";}?>
                     <input type="text" minlength="5" maxlength="5" name="code_postale" placeholder='75001' required>
                 
                     <label>VILLE</label> 
-                    <?php if (isset($err_ville)) {echo "<div class='err_form'> $err_ville<div>";}?>
+                    <?php if (isset($err_ville)) {echo "<div class='error'> $err_ville</div>";}?>
                     <input  type="text" name="ville" placeholder='Paris' required>
                 
                 </div>
