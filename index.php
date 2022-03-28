@@ -7,6 +7,8 @@ require_once('header.php') ?>
 
 <main>
 
+
+
         <!-- Carousel -->
 
     <div class="contenu_carou_auto">

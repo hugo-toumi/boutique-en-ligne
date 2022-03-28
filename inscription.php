@@ -19,6 +19,7 @@ if (isset($_POST['suscribe'])) {
 
     $valid = (boolean) true;
 
+
     // EMAIL
 
     $reqmail = $bdd->prepare("SELECT * FROM membre WHERE email =:email");
@@ -58,6 +59,7 @@ if (isset($_POST['suscribe'])) {
         $prenom ="";
     }
 
+
      // NOM
 
     if (empty($nom)) {
@@ -71,28 +73,25 @@ if (isset($_POST['suscribe'])) {
         $nom ="";
     }
 
-    // MOT DE PASSE
+
+    // ! MOT DE PASSE
 
     if (empty($mdp)) {
         $valid = false;
         $err_mdp = "Renseignez votre mot de passe.";
-    }
-
-    elseif (strlen($mdp)<8) {
+    } elseif (strlen($mdp)<8) {
         $valid = false;
         $err_mdp = "Le mot de passe doit être de 8 caractères minimum.";
         $mdp="";
-    }
-
-    elseif (empty($mdpconfirm)) {
+    } elseif (empty($mdpconfirm)) {
         $valid = false;
         $err_mdpconfirm = "Confirmez votre mot de passe.";
-    }
-
-    elseif ($mdp !== $mdpconfirm) {
+    } elseif ($mdp !== $mdpconfirm) {
         $valid = false;
         $err_mdpconfirm = "Les mots de passe ne sont pas identiques.";
         $mdpconfirm ="";
+    } else {
+        $mdp = password_hash($mdp, PASSWORD_DEFAULT);
     }
 
     // PSEUDO
@@ -116,6 +115,7 @@ if (isset($_POST['suscribe'])) {
         $ville ="";
     }
 
+
     // CODE POSTALE
 
     if (empty($code_postale)) {
@@ -129,13 +129,13 @@ if (isset($_POST['suscribe'])) {
         $err_code_postale = "Le code postal n'est pas au bon format.";
     }
 
+
     // ADRESSE
 
     if (empty($adresse)) {
         $valid = false;
     }
-
-
+ 
     if ($valid==true) {
 
         $data = [
@@ -149,7 +149,7 @@ if (isset($_POST['suscribe'])) {
             'adresse'=>$adresse,
             'statut'=>$statut,
 
-        ];
+        ]; 
         
         $query = " INSERT INTO membre (pseudo, mdp, nom, prenom, email, ville, code_postale, adresse, statut) VALUES (:pseudo, :mdp, :nom, :prenom, :email, :ville, :code_postale, :adresse, :statut)";
         $insert = $bdd->prepare($query);

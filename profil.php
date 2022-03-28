@@ -18,7 +18,6 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
     $userinfo = $requser->fetch();
 ?>
 
-
     <!-- UPDATE PROFIL !! -->
 
     <?php
@@ -49,6 +48,8 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
         $valid_ville = true; 
         $valid_code_postale = true; 
         $valid_adresse = true;
+
+
                //  EMAIL
 
         
@@ -94,7 +95,9 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             $valid_mdp = false;
             $err_mdpconfirm = "Les mots de passes ne sont pas identiques !";
             $mdpconfirm = "";
-        }
+        }  else {
+            $mdp = password_hash($mdp, PASSWORD_DEFAULT);
+        }   
 
 
         //  PSEUDO
