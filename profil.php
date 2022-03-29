@@ -274,7 +274,7 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             <?php
             if(isSet($_GET['succes']) && $_GET['succes']) {
         ?>
-            <div class="success">Vos modifications ont bien été enregistrés</div>
+            <div class="success">Vos modifications ont bien été enregistrés !</div>
         <?php
             } 
         ?>

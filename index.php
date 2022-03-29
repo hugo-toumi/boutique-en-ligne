@@ -11,7 +11,7 @@ require_once('header.php') ?>
 <?php
             if(isSet($_GET['succes']) && $_GET['succes']) {
         ?>
-            <div class="success">Vous voilà bien connecté, bonne navigation</div>
+            <div class="success">Vous êtes connecté(e) ! Bonne navigation !</div>
         <?php
             } 
         ?>

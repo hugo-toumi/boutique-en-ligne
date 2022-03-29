@@ -51,7 +51,7 @@ if (isset($_POST['connexion'])) {
         <?php
             if(isSet($_GET['succes']) && $_GET['succes']) {
         ?>
-            <div class="success">Vous vous êtes bien inscrit, veuillez vous connectez</div>
+            <div class="success">Inscription réussie ! Place à la connexion !</div>
         <?php
             } 
         ?>
