@@ -131,3 +131,12 @@ cursor: pointer;
     font-style:oblique;
     text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px 1px 10px #000000;
 }
+
+
+
+
+.success {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}

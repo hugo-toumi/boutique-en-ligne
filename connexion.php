@@ -7,49 +7,55 @@ include 'connect.php';
 if (isset($_POST['connexion'])) {
 
     $email = htmlspecialchars($_POST['email']);
-    $mdp = $_POST['mdp']; 
+    $mdp = $_POST['mdp'];
 
-        if (empty($email) or empty($mdp)) { {
-                $erreur = "Tous les champs doivent être complétés !";
-            }
+    if (empty($email) or empty($mdp)) { {
+            $erreur = "Tous les champs doivent être complétés !";
         }
+    }
 
-        if (!empty($email) and !empty($mdp)) {
+    if (!empty($email) and !empty($mdp)) {
+        $requser = $bdd->prepare("SELECT id_membre, email, mdp FROM membre WHERE email =:email");
+        $requser->setFetchMode(PDO::FETCH_ASSOC);
+        $requser->execute(['email' => $email]);
+        $user = $requser->fetch();
 
-            $requser = $bdd->prepare("SELECT id_membre, email, mdp FROM membre WHERE email =:email");
-            $requser->setFetchMode(PDO::FETCH_ASSOC);
-            $requser->execute(['email' => $email]);
-     
-            $user = $requser->fetch();
-            
-            $email_bdd = $user['email'];
+        if($user) {
             $mdp_bdd = $user['mdp'];
 
 
-            if (password_verify($mdp,$mdp_bdd)) {
+            if (password_verify($mdp, $mdp_bdd)) {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['mdp'] = $user['mdp'];
                 $_SESSION['id_membre'] = $user['id_membre'];
 
-                header('Location: profil.php');
-
+                header('Location: index.php?succes=true');  
             } else {
                 $erreur = "Email ou Mot de passe incorrect !";
-            
             }
+        } else {
+            $erreur = "Email ou Mot de passe incorrect !";
         }
     }
+}
 
 ?>
-
 
 <body>
 
     <?php require_once('header.php'); ?>
     <link rel="stylesheet" href="style/connexion.css">
 
-    <main>
+    <main> 
 
+        <?php
+            if(isSet($_GET['succes']) && $_GET['succes']) {
+        ?>
+            <div class="success">Vous vous êtes bien inscrit, veuillez vous connectez</div>
+        <?php
+            } 
+        ?>
+        
 
         <h1 class="h1conn">CONNEXION</h1>
 
@@ -57,7 +63,7 @@ if (isset($_POST['connexion'])) {
 
 
             <div class="conni">
-                
+
                 <?php if (isset($erreur)) {
                     echo "<div class='error'>" . $erreur . "</div>";
                 } ?>
@@ -80,5 +86,4 @@ if (isset($_POST['connexion'])) {
 
 
     <body>
-
-        </html>
+</html>

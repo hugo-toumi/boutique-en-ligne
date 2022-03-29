@@ -339,3 +339,8 @@ to {
 
 
 
+.success {
+    text-align: center;
+    color: green;
+    font-size: 16px;
+}

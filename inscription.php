@@ -155,9 +155,7 @@ if (isset($_POST['suscribe'])) {
         $insert = $bdd->prepare($query);
         $insert->execute($data);
 
-        header('Location: connexion.php');
-
-        
+        header('Location: connexion.php?succes=true');   
     }
 }
 
@@ -199,7 +197,7 @@ require_once('header.php');?>
                 <div class="connexion">
 
                     <label>EMAIL</label>
-                    <?php if (isset($err_email)) {echo "<div class='error'> $err_email<div>";}?> 
+                    <?php if (isset($err_email)) {echo "<div class='error'> $err_email</div>";}?> 
                     <input type="email" name="email" placeholder='Adam@gmail.com' required>
 
                     <label>MOT DE PASSE</label> 

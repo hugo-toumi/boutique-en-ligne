@@ -194,7 +194,7 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             $req->execute();
 
 
-            header('Location: index.php');
+            header('Location: profil.php?succes=true');   
         }
     }
 
@@ -270,6 +270,14 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
                     </div>
 
             </div>
+
+            <?php
+            if(isSet($_GET['succes']) && $_GET['succes']) {
+        ?>
+            <div class="success">Vos modifications ont bien été enregistrés</div>
+        <?php
+            } 
+        ?>
 
             <div id="buttoncon"> <input class="inputinside" name="profil" type="submit" value="Enregistrer"> </div>
 
