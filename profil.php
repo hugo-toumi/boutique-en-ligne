@@ -36,54 +36,54 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
         $code_postale = htmlspecialchars(trim($_POST['code_postale']));
         $mdp = htmlspecialchars(trim($_POST['mdp']));
         $mdpconfirm = htmlspecialchars(trim($_POST['mdpconfirm']));
-        $adresse = htmlspecialchars(trim($_POST['adresse']));
+        $adresse = htmlspecialchars($_POST['adresse']);
         $statut = 1;
         $id = $_SESSION['id_membre'];
 
-        $valid_email = true; 
-        $valid_mdp = true; 
+
+        $valid_email = true;
+        $valid_mdp = true;
         $valid_pseudo = true;
-        $valid_prenom = true; 
-        $valid_nom = true; 
-        $valid_ville = true; 
-        $valid_code_postale = true; 
+        $valid_prenom = true;
+        $valid_nom = true;
+        $valid_ville = true;
+        $valid_code_postale = true;
         $valid_adresse = true;
 
 
-               //  EMAIL
-
-        
-       $reqemail = $bdd->prepare("SELECT * FROM membre WHERE email =:email");
-       $reqemail->setFetchMode(PDO::FETCH_ASSOC);
-       $reqemail->execute(['email' => $email]);
-
-       $resultemail = $reqemail->fetch();
+        //  EMAIL
 
 
-       if (empty($email)) {
-           $valid_email = false;
-           $err_email = "Renseignez votre mail.";
-       } elseif (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
+        $reqemail = $bdd->prepare("SELECT * FROM membre WHERE email =:email");
+        $reqemail->setFetchMode(PDO::FETCH_ASSOC);
+        $reqemail->execute(['email' => $email]);
+
+        $resultemail = $reqemail->fetch();
+
+
+        if (empty($email)) {
+            $valid_email = false;
+            $err_email = "Renseignez votre mail.";
+        } elseif (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
             $valid_email = false;
             $err_email = "Votre email n'est pas au bon format";
             $email = "";
         } elseif ($resultemail) {
-           if($email == $email_origine) {
-               $valid_email = true;
-           } else {
-               $valid_email = false;
-               $err_email = "Cet mail est déjà utilisé.";
-               $email ="";
-           }
-       }
+            if ($email == $email_origine) {
+                $valid_email = true;
+            } else {
+                $valid_email = false;
+                $err_email = "Cet mail est déjà utilisé.";
+                $email = "";
+            }
+        }
 
-        
-    
+
+
         //  MOT DE PASSE
 
         if (empty($mdp)) {
-            $valid_mdp = false;
-            $err_mdp = "Renseignez votre mot de passe.";
+            $mdp = $userinfo['mdp'];
         } elseif (strlen($mdp) < 8) {
             $valid_mdp = false;
             $err_mdp = "Le mot de passe doit être de 8 caractères minimum.";
@@ -95,9 +95,9 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             $valid_mdp = false;
             $err_mdpconfirm = "Les mots de passes ne sont pas identiques !";
             $mdpconfirm = "";
-        }  else {
+        } else {
             $mdp = password_hash($mdp, PASSWORD_DEFAULT);
-        }   
+        }
 
 
         //  PSEUDO
@@ -113,12 +113,12 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             $valid_pseudo = false;
             $err_pseudo = "Renseignez votre pseudo.";
         } elseif ($resultpseudo) {
-            if($pseudo == $pseudo_origine) {
+            if ($pseudo == $pseudo_origine) {
                 $valid_pseudo = true;
             } else {
                 $valid_pseudo = false;
                 $err_pseudo = "Ce pseudo est déjà utilisé.";
-                $pseudo ="";
+                $pseudo = "";
             }
         }
 
@@ -172,11 +172,12 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
 
 
         // ADRESSE
-
         if (empty($adresse)) {
             $valid_adresse = false;
             $err_adresse = "Renseignez votre adresse.";
         }
+
+
 
 
         if ($valid_email == true && $valid_mdp == true && $valid_pseudo == true && $valid_prenom == true && $valid_nom == true && $valid_ville == true && $valid_code_postale == true && $valid_adresse) {
@@ -194,7 +195,7 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
             $req->execute();
 
 
-            header('Location: profil.php?succes=true');   
+            header('Location: profil.php?succes=true');
         }
     }
 
@@ -221,16 +222,16 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
 
                         <label>PRENOM</label>
                         <?php if (isset($err_prenom)) {echo "<div class='error'> $err_prenom</div>";} ?>
-                        <input type="text" name="prenom" value=<?php echo $userinfo['prenom']; ?> required>
+                        <input type="text" name="prenom" value= "<?= $userinfo['prenom']; ?>" required>
 
                         <label>NOM</label>
                         <?php if (isset($err_nom)) {echo "<div class='error'> $err_nom</div>";} ?>
-                        <input type="text" name="nom" value=<?php echo $userinfo['nom']; ?> required>
+                        <input type="text" name="nom" value= "<?= $userinfo['nom']; ?>"required>
 
                         <label>PSEUDO</label>
                         <?php if (isset($err_pseudo)) {echo "<div class='error'> $err_pseudo</div>";} ?>
-                        <input type="text" name="pseudo" value=<?php echo $userinfo['pseudo']; ?> required>
-                        <input type="hidden" name="pseudo_origine" value=<?php echo $userinfo['pseudo']; ?> >
+                        <input type="text" name="pseudo" value= "<?= $userinfo['pseudo']; ?>" required>
+                        <input type="hidden" name="pseudo_origine" value= "<?= $userinfo['pseudo']; ?>">
                     </div>
 
 
@@ -238,16 +239,16 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
 
                         <label>EMAIL</label>
                         <?php if (isset($err_email)) {echo "<div class='error'> $err_email</div>";} ?>
-                        <input type="text" name="email" value=<?php echo $userinfo['email']; ?> required>
-                        <input type="hidden" name="email_origine" value=<?php echo $userinfo['email']; ?> >
+                        <input type="text" name="email" value= "<?= $userinfo['email']; ?>" required>
+                        <input type="hidden" name="email_origine"value= "<?= $userinfo['email']; ?>">
 
                         <label>MOT DE PASSE</label>
                         <?php if (isset($err_mdp)) {echo "<div class='error'> $err_mdp</div>";} ?>
-                        <input type="password" name="mdp" value=<?php echo $userinfo['mdp']; ?> required>
+                        <input type="password" name="mdp" placeholder="********">
 
                         <label>CONFIRMATION MOT DE PASSE</label>
                         <?php if (isset($err_mdpconfirm)) {echo "<div class='error'> $err_mdpconfirm</div>";} ?>
-                        <input type="password" name="mdpconfirm" value=<?php echo $userinfo['mdp']; ?> required>
+                        <input type="password" name="mdpconfirm" placeholder="********">
 
                     </div>
 
@@ -257,27 +258,27 @@ if (isset($_SESSION['id_membre']) and $_SESSION['id_membre'] > 0) {
 
                         <label>ADRESSE</label>
                         <?php if (isset($err_adresse)) {echo "<div class='error'> $err_adresse</div>";} ?>
-                        <input type="text" name="adresse" value=<?php echo $userinfo['adresse']; ?> required>
+                        <input type="text" name="adresse" value= "<?= $userinfo['adresse']; ?>" required>
 
                         <label>CODE POSTALE</label>
                         <?php if (isset($err_code_postale)) {echo "<div class='error'> $err_code_postale</div>";} ?>
-                        <input type="text" minlength="5" maxlength="5" name="code_postale" value=<?php echo $userinfo['code_postale']; ?> required>
+                        <input type="text" minlength="5" maxlength="5" name="code_postale" value= "<?= $userinfo['code_postale']; ?>" required>
 
                         <label>VILLE</label>
                         <?php if (isset($err_ville)) {echo "<div class='error'> $err_ville</div>";} ?>
-                        <input type="text" name="ville" value=<?php echo $userinfo['ville']; ?> required>
+                        <input type="text" name="ville" value= "<?= $userinfo['ville']; ?>" required>
 
                     </div>
 
             </div>
 
             <?php
-            if(isSet($_GET['succes']) && $_GET['succes']) {
-        ?>
-            <div class="success">Vos modifications ont bien été enregistrés !</div>
-        <?php
-            } 
-        ?>
+            if (isset($_GET['succes']) && $_GET['succes']) {
+            ?>
+                <div class="success">Vos modifications ont bien été enregistrés !</div>
+            <?php
+            }
+            ?>
 
             <div id="buttoncon"> <input class="inputinside" name="profil" type="submit" value="Enregistrer"> </div>
 

@@ -134,7 +134,9 @@ if (isset($_POST['suscribe'])) {
 
     if (empty($adresse)) {
         $valid = false;
-    }
+     }  
+
+
  
     if ($valid==true) {
 
