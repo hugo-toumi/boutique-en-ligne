@@ -7,7 +7,6 @@ $mdp = '';
 $nom = '';
 $prenom = '';
 $email= '';
-$civilite = '';
 $ville = '';
 $code_postale = '';
 $adresse = '';
@@ -20,14 +19,13 @@ if (isset($_POST['save'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
-    $civilite = $_POST['civilite'];
     $ville = $_POST['ville'];
     $code_postale = $_POST['code_postale'];
     $adresse = $_POST['adresse'];
     $statut = $_POST['statut'];
 
     $mysqli = new mysqli('localhost', 'root', '', 'boutique-en-ligne');
-    $mysqli->query("INSERT INTO membre  (id_membre, pseudo, mdp, nom, prenom, email, civilite, ville, code_postale, adresse, statut) VALUES('$id_membre', '$pseudo', '$mdp','$nom','$prenom', '$email', '$civilite', '$ville', '$code_postale', '$adresse', '$statut')");
+    $mysqli->query("INSERT INTO membre  (id_membre, pseudo, mdp, nom, prenom, email, ville, code_postale, adresse, statut) VALUES('$id_membre', '$pseudo', '$mdp','$nom','$prenom', '$email', '$ville', '$code_postale', '$adresse', '$statut')");
 
     $_SESSION['message'] = "Le compte est enregistré";
     $_SESSION['msg_type'] = "success";
@@ -58,7 +56,6 @@ if (isset($_GET['edit'])) {
     $nom= $row['nom'];
     $prenom = $row['prenom'];
     $email = $row['email'];
-    $civilite= $row['civilite'];
     $ville = $row['ville'];
     $code_postale = $row['code_postale'];
     $adresse = $row['adresse'];
@@ -73,13 +70,12 @@ if (isset($_POST['update'])) {
     $nom= $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
-    $civilite= $_POST['civilite'];
     $ville = $_POST['ville'];
     $code_postale = $_POST['code_postale'];
     $adresse = $_POST['adresse'];
     $statut = $_POST['statut'];
     $mysqli = new mysqli('localhost', 'root', '', 'boutique-en-ligne');
-    $mysqli->query("UPDATE membre SET pseudo='$pseudo', mdp='$mdp', nom='$nom', prenom='$prenom', email= '$email', civilite= '$civilite', ville= '$ville', code_postale= '$code_postale', adresse= '$adresse', statut= '$statut' WHERE id_membre=$id_membre");
+    $mysqli->query("UPDATE membre SET pseudo='$pseudo', mdp='$mdp', nom='$nom', prenom='$prenom', email= '$email', ville= '$ville', code_postale= '$code_postale', adresse= '$adresse', statut= '$statut' WHERE id_membre=$id_membre");
 
     $_SESSION['message'] = "Les infos sont belles est bien modifiées";
     $_SESSION['msg_type'] = "warning";

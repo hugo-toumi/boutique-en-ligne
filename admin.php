@@ -62,7 +62,6 @@
                         <th>nom</th>
                         <th>prenom</th>
                         <th>email</th>
-                        <th>civilite</th>
                         <th>ville</th>
                         <th>code_postale</th>
                         <th>adresse</th>
@@ -82,7 +81,6 @@
                         <td><?php echo $row['nom']; ?></td>
                         <td><?php echo $row['prenom']; ?></td>
                         <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['civilite']; ?></td>
                         <td><?php echo $row['ville']; ?></td>
                         <td><?php echo $row['code_postale']; ?></td>
                         <td><?php echo $row['adresse']; ?></td>
@@ -134,10 +132,6 @@
                 <div class="form-group">
                     <label>Email</label>
                     <input type="text" name="email" value="<?php echo $email; ?>" class="form-control" placeholder="Entrez votre email">
-                </div>
-                <div class="form-group">
-                    <label>Civilite</label>
-                    <input type="text" name="civilite" value="<?php echo $civilite; ?>" class="form-control" placeholder="Entrez votre civilite m ou f">
                 </div>
                 <div class="form-group">
                     <label>ville</label>

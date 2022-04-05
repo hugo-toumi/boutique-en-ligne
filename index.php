@@ -1,8 +1,8 @@
 <body>
 <?php
-session_start();
 require_once('header.php') ?>
 <link rel="stylesheet" href="style/index.css">
+
 
 
 <main>
@@ -40,8 +40,8 @@ require_once('header.php') ?>
         <div class="jeuxhaut">
 
             <img src="img/bo2.jpg" alt="Call of Duty Black Ops 2">
-            <img src="img/gta5.jpg" alt="Grand Theft Auto V">
-            <img src="img/Mario.jpg" alt="Mario Kart 8 Deluxe">
+            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=4"><img src="img/gta5.jpg" alt="Grand Theft Auto V"></a>
+            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=7"><img src="img/Mario.jpg" alt="Mario Kart 8 Deluxe"></a>
             <img src="img/RD.jpg" alt="Red Dead Dedemption 2">
 
         </div>
@@ -86,19 +86,7 @@ require_once('header.php') ?>
             
 <!-- ANIMATION CARTE -->
 
-		<div class="main-box">
-			<div class="poster-box"><a href="fiche_produit.php"><img src="./img/bo2.jpg" class="jeu" /></a></div>
-			    <div class="ticket-container">
-				    <div class="ticket__content">
-
-                        <h4 class="titre">Black Ops 2</h4>
-                        <p class="prix">18.00€</p>
-                        <a href="panier.php"><button class="panier">Ajouter au panier</button></a>
-
-				    </div>
-			    </div>
-		</div>
-
+		
 
 </main>
 
