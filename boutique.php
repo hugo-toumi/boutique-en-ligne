@@ -1,4 +1,5 @@
 <?php
+require('header.php');
 require_once("init.inc.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 //--- AFFICHAGE DES CATEGORIES ---//
@@ -29,3 +30,7 @@ if(isset($_GET['categorie']))
 $contenu .= '</div>';
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 echo $contenu;
+
+require('footer.php');
+
+?>

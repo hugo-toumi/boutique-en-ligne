@@ -1,4 +1,5 @@
 <?php
+require('header.php');
 require_once("init.inc.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 if(isset($_GET['id_produit']))  { $resultat = executeRequete("SELECT * FROM produit WHERE id_produit = '$_GET[id_produit]'"); }
@@ -35,3 +36,7 @@ else
 $contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>Retour vers la séléction de " . $produit['categorie'] . "</a>";
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
 echo $contenu;
+
+require('footer.php');
+
+?>
