@@ -1,6 +1,7 @@
 <body>
 <?php
-require_once('header.php') ?>
+require('init.inc.php');
+require('header.php'); ?>
 <link rel="stylesheet" href="style/index.css">
 
 

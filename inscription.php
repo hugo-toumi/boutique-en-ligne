@@ -1,5 +1,6 @@
 <?php
 
+require_once("init.inc.php");
 include 'connect.php' ;
 
 

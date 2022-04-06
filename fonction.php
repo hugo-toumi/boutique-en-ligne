@@ -90,5 +90,4 @@ function retirerProduitDuPanier($id_produit_a_supprimer)
     }
 }
 //------------------------------------
-
 ?>

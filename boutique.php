@@ -1,6 +1,6 @@
 <?php
+require("init.inc.php");
 require('header.php');
-require_once("init.inc.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 //--- AFFICHAGE DES CATEGORIES ---//
 $categories_des_produits = executeRequete("SELECT DISTINCT categorie FROM produit");

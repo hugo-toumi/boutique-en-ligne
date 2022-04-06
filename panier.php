@@ -1,6 +1,5 @@
 <?php
 require_once("init.inc.php");
-
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
 //--- AJOUT PANIER ---//
 if(isset($_POST['ajout_panier'])) 
@@ -54,7 +53,7 @@ if(isset($_POST['payer']))
 }
  
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
-require_once('header.php');
+include("header.php");
 echo $contenu;
 echo "<table border='1' style='border-collapse: collapse' cellpadding='7'>";
 echo "<tr><td colspan='5'>Panier</td></tr>";
@@ -88,6 +87,7 @@ else
     echo "<tr><td colspan='5'><a href='?action=vider'>Vider mon panier</a></td></tr>";
 }
 echo "</table><br>";
+echo "<i>Réglement par CHÈQUE uniquement à l'adresse suivante : 300 rue de vaugirard 75015 PARIS</i><br>";
 // echo "<hr>session panier:<br>"; debug($_SESSION);
-require_once('footer.php');
+include("footer.php");
 ?>
