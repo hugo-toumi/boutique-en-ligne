@@ -1,5 +1,4 @@
 <?php
-
 require_once("init.inc.php");
 require('header.php');
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//

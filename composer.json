@@ -1,0 +1,17 @@
+{
+    "name": "hugo/size",
+    "autoload": {
+        "psr-4": {
+            "Hugo\\Size\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hugo-toumi",
+            "email": "hugo.toumi@laplateforme.io"
+        }
+    ],
+    "require": {
+        "stripe/stripe-php": "^7.121"
+    }
+}
