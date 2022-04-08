@@ -39,7 +39,7 @@ include('vendor/autoload.php');
 
     </head>
     <body>
-    <?php  echo " Le prix est de ".$price ."€";?>
+    <?php  echo " Le prix est de ".$prix ."€";?>
     <form method="post">
     <div id="errors"></div>
     <input id="cardholder-name" type="text" placeholder="Titulaire de la carte">
