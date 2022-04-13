@@ -27,7 +27,7 @@ require('header.php'); ?>
             <img src="img-carrou/battle-carrou.jpg" alt="Battlefield 2042">
             <img src="img-carrou/bo2-carrou.jpg" alt="Call of Duty Black Ops 2">
             <img src="img-carrou/crash-carrou.jpg" alt="Crash Bandicoot 4 It's About Time">
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=11"><img src="img-carrou/rd2-carrou.jpg" alt="Red Dead Dedemption 2"></a>
+            <img src="img-carrou/rd2-carrou.jpg" alt="Red Dead Dedemption 2">
             <img src="img-carrou/Gta5-carrou.jpg" alt="Grand Theft Auto V">
             <img src="img-carrou/mario-carrou.jpg" alt="Mario Kart 8 Deluxe">
 

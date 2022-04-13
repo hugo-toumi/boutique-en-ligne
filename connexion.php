@@ -2,6 +2,15 @@
 
 require_once("init.inc.php");
 
+if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
+{
+    session_destroy();
+}
+if(internauteEstConnecte())
+{
+    header("location:profil.php");
+}
+
 include 'connect.php';
 
 if (isset($_POST['connexion'])) {

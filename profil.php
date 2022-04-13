@@ -3,6 +3,7 @@
 session_start();
 
 include 'connect.php';
+require_once('fonction.php');
 
 
 // * Recuperation des données/infos dans la bdd avec lesquels l'user c'est inscrit et connecté  (echo dans le form)
