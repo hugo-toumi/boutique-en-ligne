@@ -61,6 +61,7 @@
                         <th>categorie</th>
                         <th>sous_categorie</th>
                         <th>photo</th>
+                        <th>video</th>
                         <th>titre</th>
                         <th>description</th>
                         <th>taille</th>
@@ -80,6 +81,7 @@
                         <td><?php echo $row['categorie']; ?></td>
                         <td><?php echo $row['sous_categorie']; ?></td>
                         <td><?php echo $row['photo']; ?></td>
+                        <td><?php echo $row['video']; ?></td>
                         <td><?php echo $row['titre']; ?></td>
                         <td><?php echo $row['description']; ?></td>
                         <td><?php echo $row['taille']; ?></td>
@@ -132,6 +134,13 @@
                     <label>Photo</label>
                     <input type="text" name="photo" class="form-control" value="<?php echo $photo; ?>" placeholder="Entrez le lien de la photo">
                 </div>
+                <div class="form-group">
+                    <label>Video</label>
+                    <video controls width="250">
+                    <source src="<?php echo $video; ?>"
+                    type="video">
+                    </video>                
+                    </div>
         
                 <div class="form-group">
                     <label>Titre</label>

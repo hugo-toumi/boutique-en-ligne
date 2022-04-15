@@ -1,8 +1,8 @@
 
 <?php
-
+require('init.inc.php');
+require('header.php');
 include('vendor/autoload.php');
-        session_start();
 
         
          
@@ -51,5 +51,6 @@ include('vendor/autoload.php');
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="js/script.js"></script>
+    <?php require_once('footer.php');?>
     </body>
 </html>

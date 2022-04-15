@@ -23,14 +23,27 @@
 
 
         <div class="searchBox">
+<?php
+       $bdd = new PDO('mysql:host=localhost;dbname=boutique-en-ligne;charset=utf8', 'root','');
+ 
+        $produit = $bdd->query('SELECT titre FROM produit ORDER BY id_produit DESC');
+        if(isset($_GET['q']) AND !empty($_GET['q'])) {
+         $q = htmlspecialchars($_GET['q']);
+        $produit = $bdd->query('SELECT titre FROM produit WHERE titre LIKE "%'.$q.'%" ORDER BY id_produit DESC');
+        if($produit->rowCount() == 0) {
+        $produit = $bdd->query('SELECT titre FROM produit WHERE CONCAT(titre) LIKE "%'.$q.'%" ORDER BY id_produit DESC');
+    }
+ }
+ ?>
 
-            <input class="searchInput"  placeholder="Recherche ...">
+<form method="GET">
+<input class="searchInput"  placeholder="Recherche ...">
             
-                <button class="searchButton" href="#">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                
-        </div>
+            <button class="searchButton" href="boutique">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+</form>
+</div>
 
      
 
