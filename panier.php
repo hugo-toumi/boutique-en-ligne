@@ -1,6 +1,7 @@
 <?php
 require_once("init.inc.php");
 //--------------------------------- TRAITEMENTS PHP ---------------------------------//
+
 //--- AJOUT PANIER ---//
 if(isset($_POST['ajout_panier'])) 
 {   // debug($_POST);

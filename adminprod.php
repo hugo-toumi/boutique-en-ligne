@@ -113,6 +113,7 @@
         <div class="row justify-content-center">
             <form action="process_prod.php" method="POST">
                 <input type="hidden" name="id_produit" value="<?php echo $id_produit; ?>">
+
                 <div class="form-group">
                     <label>Reference</label>
                     <input type="text" name="reference" class="form-control" value="<?php echo $reference; ?>" placeholder="Entrez votre pseudo">
@@ -138,7 +139,7 @@
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" name="description" value="<?php echo $description; ?>" class="form-control" placeholder="Entrez votre prenom">
+                    <input  type="text" name="description" class="form-control" value="<?php echo $description; ?>" placeholder="Entrez votre prenom">
                 </div>
                 <div class="form-group">
                     <label>Taille</label>
@@ -146,11 +147,11 @@
                 </div>
                 <div class="form-group">
                     <label>Prix</label>
-                    <input type="text" name="prix" value="<?php echo $prix; ?>" class="form-control" placeholder="Entrez votre civilite m ou f">
+                    <input type="text" name="prix" value="<?php echo $prix; ?>" class="form-control" placeholder="Entrez votre prix">
                 </div>
                 <div class="form-group">
                     <label>Stock</label>
-                    <input type="text" name="stock" value="<?php echo $stock; ?>" class="form-control" placeholder="Entrez votre ville">
+                    <input type="text" name="stock" value="<?php echo $stock; ?>" class="form-control" placeholder="Nombre de stock disponible">
                 </div>
 
 
