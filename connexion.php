@@ -1,16 +1,6 @@
 <?php
 
-require_once("init.inc.php");
-
-if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
-{
-    session_destroy();
-}
-if(internauteEstConnecte())
-{
-    header("location:profil.php");
-}
-
+require('init.inc.php');
 include 'connect.php';
 
 if (isset($_POST['connexion'])) {
@@ -36,7 +26,7 @@ if (isset($_POST['connexion'])) {
             if (password_verify($mdp, $mdp_bdd)) {
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['mdp'] = $user['mdp'];
-                $_SESSION['id_membre'] = $user['id_membre'];
+                $_SESSION['membre'] = $user['id_membre'];
 
                 header('Location: index.php?succes=true');  
             } else {
