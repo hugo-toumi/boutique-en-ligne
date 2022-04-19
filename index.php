@@ -40,19 +40,19 @@ require('header.php'); ?>
 
         <div class="jeuxhaut">
 
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=10"><img src="img/bo2.jpg" alt="Call of Duty Black Ops 2"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=4"><img src="img/gta5.jpg" alt="Grand Theft Auto V"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=7"><img src="img/Mario.jpg" alt="Mario Kart 8 Deluxe"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=11"><img src="img/RD.jpg" alt="Red Dead Dedemption 2"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=1"><img src="img/bo2.jpg" alt="Call of Duty Black Ops 2"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=2"><img src="img/gta5.jpg" alt="Grand Theft Auto V"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=3"><img src="img/Mario.jpg" alt="Mario Kart 8 Deluxe"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=4"><img src="img/RD.jpg" alt="Red Dead Dedemption 2"></a>
 
         </div>
 
         <div class="jeuxbas">
 
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=12"><img src="img/Crash.jpg" alt="Crash Bandicoot 4 It's About Time"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=13"><img src="img/Csgo.png" alt="Counter-Strike Global Offensive"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=19"><img src="img/Blackops.jpg" alt="Call of Duty Black Ops 2"></a>
-            <a href="http://localhost:8888/boutique-en-ligne/fiche_produit.php?id_produit=20"><img src="img/AS.jpg" alt="Assassin Screed Brotherhood"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=5"><img src="img/Crash.jpg" alt="Crash Bandicoot 4 It's About Time"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=6"><img src="img/Csgo.png" alt="Counter-Strike Global Offensive"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=7"><img src="img/Blackops.jpg" alt="Call of Duty Black Ops 2"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=8"><img src="img/AS.jpg" alt="Assassin Screed Brotherhood"></a>
 
         </div>
 

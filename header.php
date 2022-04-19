@@ -50,7 +50,7 @@
                             <a href="profil.php">MON PROFIL</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+                            <a href="boutique.php">BOUTIQUE</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
                             <a href="panier.php">PANIER</a></li>
@@ -70,7 +70,7 @@
                             <a href="inscription.php">INSCRIPTION | </a><a href="connexion.php">CONNEXION</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+                            <a href="boutique.php">BOUTIQUE</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
                             <a href="panier.php">PANIER</a></li>

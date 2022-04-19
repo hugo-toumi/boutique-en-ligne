@@ -15,7 +15,9 @@ $prix ="";
 $quantite= "";
 $panier= "";
 $select= "";
-$option= "";
+$option="";
+$stock="";
+
 
 
 
@@ -37,7 +39,7 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
     
     if($produit['stock'] > 0){
 
-                $contenu .= "<i>Nombre de produit(s) disponible : $produit[stock] </i><br><br>";
+                $contenu .= "<i class='stock'>Nombre de produit(s) disponible : $produit[stock] </i><br><br>";
                 $contenu .= '<form method="post" action="panier.php">'; 
 
                 $panier .= '<input class="panier" type="submit" name="ajout_panier" value="Ajouter au panier !">';
@@ -57,7 +59,7 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
                     $contenu .= 'Rupture de stock !';
                 }
 
-$contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>Retour vers la séléction de " . $produit['categorie'] . "</a>";
+
 
 
 
@@ -93,8 +95,18 @@ $contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>
             <?php echo $prix ;?>
         </div>
 
-        <div class="othertrois">
-            <?php echo $panier ; echo $quantite ; echo $select ; ?>
+        <div class="quantite-select-option">
+            <?php echo $quantite ; echo $select ; echo $option ; ?>
+        </div>
+
+        
+        <div class="stock">
+            <?php echo $stock ;?>
+        </div>
+
+        
+        <div class="panier">
+            <?php echo $panier ; ?>
         </div>
 
 </body>
