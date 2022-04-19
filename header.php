@@ -101,13 +101,13 @@
     <nav class="navcons">
             <div class="consoles"> 
                
-                <p class="pcons"></p><a href="http://localhost:8888/boutique-en-ligne/boutique.php?categorie=Playstation"></p><img class="imageconsole" src="https://img.icons8.com/color/48/000000/play-station.png"/>Playstation</a>
+                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Playstation"></p><img class="imageconsole" src="https://img.icons8.com/color/48/000000/play-station.png"/>Playstation</a>
                 
-                <p class="pcons"></p><a href="http://localhost:8888/boutique-en-ligne/boutique.php?categorie=Xbox"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/xbox.png"/>Xbox</a>
+                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Xbox"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/xbox.png"/>Xbox</a>
 
-                <p class="pcons"></p><a href="http://localhost:8888/boutique-en-ligne/boutique.php?categorie=PC"><img class="imageconsole" src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-pc-computer-xnimrodx-lineal-color-xnimrodx.png"/>PC</a>
+                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=PC"><img class="imageconsole" src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-pc-computer-xnimrodx-lineal-color-xnimrodx.png"/>PC</a>
             
-                <p class="pcons"></p><a href="http://localhost:8888/boutique-en-ligne/boutique.php?categorie=Nintendo"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/nintendo-switch.png"/>Nintendo</a>
+                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Nintendo"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/nintendo-switch.png"/>Nintendo</a>
 
             </div>
         </nav>
