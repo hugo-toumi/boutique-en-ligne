@@ -1,14 +1,13 @@
 
 <?php
 require('init.inc.php');
-require('header.php');
 include('vendor/autoload.php');
 
         
          
             
             // Nous appelons l'autoloader pour avoir accès à Stripe
-            $prix = (float) 42;
+            $prix = (float) $_SESSION['panier']['prix'];
 
             // Nous instancions Stripe en indiquand la clé privée, pour prouver que nous sommes bien à l'origine de cette demande
             \Stripe\Stripe::setApiKey('sk_test_51KlW7ABFN5VA56amRmEGMRKj8mTML8or1cC6s8e5YcRPInrIwiAxxESCTQOHopIYCTbKJoT9RLDOa4W7vaOmI90p00etksu08k');
@@ -39,7 +38,14 @@ include('vendor/autoload.php');
 
     </head>
     <body>
-    <?php  echo " Le prix est de ".$prix ."€";?>
+    <?php
+    for($i = 0; $i < count($_SESSION['panier']['id_produit']); $i++) 
+    {
+        echo "<tr>";
+        echo "<td>" . $_SESSION['panier']['prix'][$i] . "</td>";
+        echo "</tr>";
+    }
+    ?>
     <form method="post">
     <div id="errors"></div>
     <input id="cardholder-name" type="text" placeholder="Titulaire de la carte">
@@ -51,6 +57,5 @@ include('vendor/autoload.php');
     <script src="https://js.stripe.com/v3/"></script>
     <script src="https://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="js/script.js"></script>
-    <?php require_once('footer.php');?>
     </body>
 </html>

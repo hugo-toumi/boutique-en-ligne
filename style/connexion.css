@@ -60,7 +60,7 @@ font-size: 20px;
 }
 
 
-input[type=email], input[type=password] {
+input[type=pseudo], input[type=password] {
 border: 2px solid #000000;
 font: 25px "Open Sans", sans-serif;
 border-radius: 20px;

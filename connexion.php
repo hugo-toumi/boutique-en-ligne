@@ -1,88 +1,87 @@
-<?php
-
-require('init.inc.php');
-include 'connect.php';
-
-if (isset($_POST['connexion'])) {
-
-    $email = htmlspecialchars($_POST['email']);
-    $mdp = $_POST['mdp'];
-
-    if (empty($email) or empty($mdp)) { {
-            $erreur = "Tous les champs doivent être complétés !";
-        }
-    }
-
-    if (!empty($email) and !empty($mdp)) {
-        $requser = $bdd->prepare("SELECT id_membre, email, mdp FROM membre WHERE email =:email");
-        $requser->setFetchMode(PDO::FETCH_ASSOC);
-        $requser->execute(['email' => $email]);
-        $user = $requser->fetch();
-
-        if($user) {
-            $mdp_bdd = $user['mdp'];
-
-
-            if (password_verify($mdp, $mdp_bdd)) {
-                $_SESSION['email'] = $user['email'];
-                $_SESSION['mdp'] = $user['mdp'];
-                $_SESSION['membre'] = $user['id_membre'];
-
-                header('Location: index.php?succes=true');  
-            } else {
-                $erreur = "Email ou Mot de passe incorrect !";
+<?php require_once("init.inc.php");
+//--------------------------------- TRAITEMENTS PHP ---------------------------------//
+if(isset($_GET['action']) && $_GET['action'] == "deconnexion")
+{
+    session_destroy();
+}
+if(internauteEstConnecte())
+{
+    header("location:profil.php");
+}
+if($_POST)
+{
+    // $contenu .=  "pseudo : " . $_POST['pseudo'] . "<br>mdp : " .  $_POST['mdp'] . "";
+    $resultat = executeRequete("SELECT * FROM membre WHERE pseudo='$_POST[pseudo]'");
+    if($resultat->num_rows != 0)
+    {
+        // $contenu .=  '<div style="background:green">pseudo connu!</div>';
+        $membre = $resultat->fetch_assoc();
+        if($membre['mdp'] == $_POST['mdp'])
+        {
+            //$contenu .= '<div class="validation">mdp connu!</div>';
+            foreach($membre as $indice => $element)
+            {
+                if($indice != 'mdp')
+                {
+                    $_SESSION['id_membre'][$indice] = $element;
+                }
             }
-        } else {
-            $erreur = "Email ou Mot de passe incorrect !";
+            header("location:profil.php");
         }
+        else
+        {
+            $contenu .= '<div class="erreur">Erreur de MDP</div>';
+        }       
+    }
+    else
+    {
+        $contenu .= '<div class="erreur">Erreur de pseudo</div>';
     }
 }
-
+//--------------------------------- AFFICHAGE HTML ---------------------------------//
 ?>
-
 <body>
 
-    <?php require_once('header.php'); ?>
-    <link rel="stylesheet" href="style/connexion.css">
+<?php require_once('header.php'); ?>
+<link rel="stylesheet" href="style/connexion.css">
 
-    <main> 
+<main> 
 
-        <?php
-            if(isSet($_GET['succes']) && $_GET['succes']) {
-        ?>
-            <div class="success">Inscription réussie ! Place à la connexion !</div>
-        <?php
-            } 
-        ?>
-        
+    <?php
+        if(isSet($_GET['succes']) && $_GET['succes']) {
+    ?>
+        <div class="success">Inscription réussie ! Place à la connexion !</div>
+    <?php
+        } 
+    ?>
+    
 
-        <h1 class="h1conn">CONNEXION</h1>
+    <h1 class="h1conn">CONNEXION</h1>
 
-        <form method="post" action="" class="formi">
-
-
-            <div class="conni">
-
-                <?php if (isset($erreur)) {
-                    echo "<div class='error'>" . $erreur . "</div>";
-                } ?>
-
-                <label>EMAIL</label>
-                <input type="email" name="email" placeholder='Arthur@gmail.com'>
-
-                <label>MOT DE PASSE </label>
-                <input type="password" name="mdp" placeholder='*****'>
-            </div>
-
-            <div id="buttoncon"> <input class="inputinside" type="submit" name="connexion" value="Se connecter"> </div>
+    <form method="post" action="" class="formi">
 
 
-        </form>
+        <div class="conni">
 
-    </main>
+            <?php if (isset($erreur)) {
+                echo "<div class='error'>" . $erreur . "</div>";
+            } ?>
 
-    <?php require_once('footer.php') ?>
+            <label>Pseudo</label>
+            <input type="pseudo" name="pseudo" placeholder='Entrez votre Pseudo'>
+
+            <label>MOT DE PASSE </label>
+            <input type="password" name="mdp" placeholder='*****'>
+        </div>
+
+        <div id="buttoncon"> <input class="inputinside" type="submit" name="connexion" value="Se connecter"> </div>
 
 
-    <body>
-</html>
+    </form>
+
+</main>
+
+<?php require_once('footer.php') ?>
+
+
+<body>

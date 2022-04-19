@@ -40,7 +40,7 @@ if(isset($_POST['payer']))
     }
     if(!isset($erreur))
     {
-        executeRequete("INSERT INTO commande (id_membre, membre, montant, date_enregistrement) VALUES (" . $_SESSION['membre']['id_membre'] . "," . montantTotal() . ", NOW())");
+        executeRequete("INSERT INTO commande (id_membre, montant, date_enregistrement) VALUES (" . $_SESSION['id_membre']['id_membre'] . "," . montantTotal() . ", NOW())");
         $id_commande = $mysqli->insert_id;
         for($i = 0; $i < count($_SESSION['panier']['id_produit']); $i++)
         {
