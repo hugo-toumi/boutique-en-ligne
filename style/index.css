@@ -16,8 +16,8 @@ src: url("../zen-dots/ZenDots-Regular.ttf");
 
 
 body{
-    background-image: url("../img/whynot.jpg");
-    background-image: cover;
+background-image: url("../img/whynot.jpg");
+background-image: cover;
 }
 
 
@@ -114,9 +114,17 @@ width: 200px;
 height: auto;
 border-radius: 10px;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+
+-webkit-filter: grayscale(0) blur(0px);
+filter: grayscale(0) blur(0px);
+-webkit-transition: all 0.5s ease;
+transition: all 0.5s ease;
 }
 
-
+.jeuxhaut #bo2:hover, #gta:hover, #mario:hover, #red:hover {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+}
 
 
 .jeuxbas{
@@ -130,6 +138,16 @@ width: 200px;
 height: auto;
 border-radius: 10px;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+
+-webkit-filter: grayscale(0) blur(0px);
+filter: grayscale(0) blur(0px);
+-webkit-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+.jeuxbas #crash:hover, #cs:hover, #callof2:hover, #assassin:hover {
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
 }
 
 
@@ -210,6 +228,19 @@ height: auto;
 border-radius: 10px;
 margin-bottom: 20%;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+
+-webkit-filter: blur(3px);
+filter: blur(3px);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+
+
+.lesjdm #fifa:hover, #callof:hover, #forza:hover, #batte:hover {
+
+-webkit-filter: blur(0);
+filter: blur(0);
+cursor: pointer;
 }
 
 
@@ -303,46 +334,46 @@ border-bottom-right-radius: 5px;
 60%,
 80%,
 to {
-	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 0% {
-	opacity: 0;
-	-webkit-transform: scale3d(0.3, 0.3, 0.3);
-	transform: scale3d(0.3, 0.3, 0.3);
+opacity: 0;
+-webkit-transform: scale3d(0.3, 0.3, 0.3);
+transform: scale3d(0.3, 0.3, 0.3);
 }
 20% {
-	-webkit-transform: scale3d(1.03, 1.03, 1.03);
-	transform: scale3d(1.03, 1.03, 1.03);
+-webkit-transform: scale3d(1.03, 1.03, 1.03);
+transform: scale3d(1.03, 1.03, 1.03);
 }
 40% {
-	-webkit-transform: scale3d(0.9, 0.9, 0.9);
-	transform: scale3d(0.9, 0.9, 0.9);
+-webkit-transform: scale3d(0.9, 0.9, 0.9);
+transform: scale3d(0.9, 0.9, 0.9);
 }
 60% {
-	opacity: 1;
-	-webkit-transform: scale3d(1.01, 1.01, 1.01);
-	transform: scale3d(1.01, 1.01, 1.01);
+opacity: 1;
+-webkit-transform: scale3d(1.01, 1.01, 1.01);
+transform: scale3d(1.01, 1.01, 1.01);
 }
 80% {
-	-webkit-transform: scale3d(0.97, 0.97, 0.97);
-	transform: scale3d(0.97, 0.97, 0.97);
+-webkit-transform: scale3d(0.97, 0.97, 0.97);
+transform: scale3d(0.97, 0.97, 0.97);
 }
 to {
-	opacity: 1;
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
+opacity: 1;
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
 }
 }
 
 
 
 .success {
-    color: rgb(0, 255, 42);
-	text-align: center;
-	margin-top:3%;
-    font-size: 25px; 
-    font-family: tahoma, arial, helvetica;
-	/* border-style:ridge; */
-    text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px 1px 10px #000000;
+color: rgb(0, 255, 42);
+text-align: center;
+margin-top:3%;
+font-size: 25px; 
+font-family: tahoma, arial, helvetica;
+/* border-style:ridge; */
+text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 1px 1px 10px #000000;
 }

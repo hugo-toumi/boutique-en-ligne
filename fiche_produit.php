@@ -80,6 +80,7 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
 </head>
 <body>
     
+<!-- JEUX ICONIQUE -->
 
         <?php echo $h1 ;?>
 
@@ -108,6 +109,10 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
         <div class="panier">
             <?php echo $panier ; ?>
         </div>
+
+
+<!-- JEUX DU MOMENTS -->
+
 
 </body>
 </html>

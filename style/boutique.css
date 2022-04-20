@@ -1,0 +1,24 @@
+body{
+    background-image: url("../img/mur.jpg");
+    }
+
+.icons {
+display: flex;
+justify-content: space-evenly;
+margin-top: 10%;
+margin-bottom: 10%;
+}
+
+
+
+.icons #play:hover, #xbox:hover, #nintendo:hover, #pc:hover { 
+    transform: scale(1.5, 1.5);
+    transition: 0.8s;
+}
+
+.icons #play, #xbox, #nintendo, #pc { 
+    transition: 0.8s;
+}
+
+
+
