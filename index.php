@@ -77,10 +77,10 @@ require('header.php'); ?>
 
             <div class="lesjdm">
 
-            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=9"><img id="fifa" src="img/Fifa.jpg" alt="Fifa 22">
-            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=10"><img id="callof" src="img/Call of Vanguard.jpg" alt="Call of Duty Vanguard">
-            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=11"><img id="forza" src="img/Forza.jpg" alt="Forza Horizon 5">
-            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=12"><img id="batte" src="img/battefield.jpg" alt="Battelfield 2042">
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=9"><img id="fifa" src="img/Fifa.jpg" alt="Fifa 22"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=10"><img id="callof" src="img/Call of Vanguard.jpg" alt="Call of Duty Vanguard"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=11"><img id="forza" src="img/Forza.jpg" alt="Forza Horizon 5"></a>
+            <a href="http://localhost/Gameland/fiche_produit.php?id_produit=12"><img id="batte" src="img/battefield.jpg" alt="Battelfield 2042"></a>
 
             </div>
 

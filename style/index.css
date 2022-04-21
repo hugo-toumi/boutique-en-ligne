@@ -110,8 +110,8 @@ margin-top: 3%;
 }
 
 .jeuxhaut img{
-width: 200px;
-height: auto;
+    width: 200px;
+    height: 300px;
 border-radius: 10px;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
 
@@ -134,8 +134,8 @@ margin-top: 7%;
 }
 
 .jeuxbas img{
-width: 200px;
-height: auto;
+    width: 200px;
+    height: 300px;
 border-radius: 10px;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
 
@@ -220,26 +220,26 @@ display: flex;
 justify-content: space-around;
 margin-top: 3%;
 
+
 }
 
 .lesjdm img{
-width: 250px;
-height: auto;
-border-radius: 10px;
+    width: 250px;
+    height: 350px;
+
 margin-bottom: 20%;
 box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
 
--webkit-filter: blur(3px);
-filter: blur(3px);
--webkit-transition: .3s ease-in-out;
-transition: .3s ease-in-out;
+border: 1px solid #000000;
+
 }
 
 
 .lesjdm #fifa:hover, #callof:hover, #forza:hover, #batte:hover {
 
--webkit-filter: blur(0);
-filter: blur(0);
+   outline: none;
+    border-color: #38f62e;
+    box-shadow: 0 0 30px #38f62e;
 cursor: pointer;
 }
 
