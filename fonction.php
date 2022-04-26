@@ -29,13 +29,13 @@ function debug($var, $mode = 1)
 //------------------------------------
 function internauteEstConnecte()
 { 
-    if(!isset($_SESSION['membre'])) return false;
+    if(!isset($_SESSION['id_membre'])) return false;
     else return true;
 }
 //------------------------------------
 function internauteEstConnecteEtEstAdmin()
 {
-    if(internauteEstConnecte() && $_SESSION['membre']['statut'] == 1) return true;
+    if(internauteEstConnecte() && $_SESSION['userconnect']['statut'] == 1) return true;
     else return false;
 }
 //------------------------------------
