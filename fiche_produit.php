@@ -42,7 +42,7 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
                 $contenu .= "<i class='stock'>Nombre de produit(s) disponible : $produit[stock] </i><br><br>";
                 $contenu .= '<form method="post" action="panier.php">'; 
 
-                $panier .= '<input class="panier" type="submit" name="ajout_panier" value="Ajouter au panier !">';
+                $panier .= '<input class="panier" type="submit" name="ajout_panier" value="Ajouter au panier">';
                 $quantite .= '<label class="quantite" for="quantite">Quantité : </label>';
                 $select .= '<select class="quantite" name="quantite">';
                

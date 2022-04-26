@@ -11,7 +11,7 @@ if(isset($_GET['categorie']))
     {
       
         $contenu .= "<div class='carte'><h2 class='titre'>$produit[titre]</h2>";
-        $contenu .= "<a href=\"fiche_produit.php?id_produit=$produit[id_produit]\"><img class='photo' src=\"$produit[photo]\" =\"130\" height=\"100\"></a>";
+        $contenu .= "<a href=\"fiche_produit.php?id_produit=$produit[id_produit]\"><img class='photo' src=\"$produit[photo]\"></a>";
         $contenu .= "<p class='prix'>$produit[prix] €</p>";
         $contenu .= '<a class="detail" href="fiche_produit.php?id_produit=' . $produit['id_produit'] . '">Detail du jeu</a> </div>';
  

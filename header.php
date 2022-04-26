@@ -49,7 +49,8 @@
                             <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
                             <a href="profil.php">MON PROFIL</a></li>
 
-                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
+                           
+                            <li class="lidroite"><i class="fa-solid fa-shop" style="color:#0DA5E6"></i> <!-- Icon BOUTIQUE-->
                             <a href="boutique.php">BOUTIQUE</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
@@ -69,8 +70,8 @@
                             <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
                             <a href="inscription.php">INSCRIPTION | </a><a href="connexion.php">CONNEXION</a></li>
 
-                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                            <a href="boutique.php">BOUTIQUE</a></li>
+                            <li class="lidroite"><i class="fa-solid fa-shop" style="color:#0DA5E6"></i> <!-- Icon BOUTIQUE-->
+                            <a href="boutique.php">BOUTIQUE</a></li>    
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
                             <a href="panier.php">PANIER</a></li>
