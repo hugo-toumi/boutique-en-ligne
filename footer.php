@@ -20,7 +20,7 @@
 
                 <p class="pnav">CARTE BLEU</p> <img class="imageicon" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-credit-card-banking-flaticons-lineal-color-flat-icons.png"/><!-- Icon CB-->
             
-                <p class="pnav">MASTER CARD</p><img class="imageicon" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-mastercard-incorporated-an-american-multinational-financial-services-corporation-logo-color-tal-revivo.png"/><!-- Icon MC -->
+                <p class="pnav">MASTERCARD</p><img class="imageicon" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-mastercard-incorporated-an-american-multinational-financial-services-corporation-logo-color-tal-revivo.png"/><!-- Icon MC -->
 
                 <p class="pnav">EUR</p><img class="imageicon" src="https://img.icons8.com/fluency/48/000000/euro-pound-exchange.png"/><!-- Icon EUR -->
 

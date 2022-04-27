@@ -122,7 +122,7 @@
 
     <!-- <?php
  
-        if(isset(  $_SESSION['userconnect'])) {
+        if(isset(  $_SESSION['membre'])) {
             echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
             echo ' <li><a href="histoire.php">Notre histoire</a></li>';
             echo '<li><a href="panier.php">Panier</a></li>';

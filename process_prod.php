@@ -6,12 +6,12 @@ $reference = '';
 $categorie = '';
 $sous_categorie = '';
 $photo = '';
-$video = '';
 $titre = '';
 $description = '';
 $taille = '';
 $prix = '';
 $stock = '';
+
 require('connect.php');
 
 if (isset($_POST['save'])) {
@@ -25,7 +25,7 @@ if (isset($_POST['save'])) {
     $prix = htmlspecialchars($_POST['prix']);
     $stock = htmlspecialchars($_POST['stock'])  ;
     $mysqli = new mysqli('localhost', 'root', '', 'boutique-en-ligne');
-    $mysqli->query("INSERT INTO produit (id_produit, reference, categorie, sous_categorie, photo, video, titre, description, taille, prix, stock) VALUES('$id_produit', '$reference', '$categorie', '$sous_categorie', '$photo', '$video','$titre','$description', '$taille', '$prix', '$stock')");
+    $mysqli->query("INSERT INTO produit (id_produit, reference, categorie, sous_categorie, photo, titre, description, taille, prix, stock) VALUES('$id_produit', '$reference', '$categorie', '$sous_categorie', '$photo', '$titre','$description', '$taille', '$prix', '$stock')");
 
     $_SESSION['message'] = "Le compte est enregistré";
     $_SESSION['msg_type'] = "success";
@@ -55,7 +55,6 @@ if (isset($_GET['edit'])) {
     $categorie = $row['categorie'];
     $sous_categorie = $row['sous_categorie'];
     $photo = $row['photo'];
-    $video = $row['video'];
     $titre = $row['titre'];
     $description = $row['description'];
     $taille = $row['taille'];
@@ -70,14 +69,13 @@ if (isset($_POST['update'])) {
     $categorie = $_POST['categorie'];
     $sous_categorie = $_POST['sous_categorie'];
     $photo = $_POST['photo'];
-    $video = $_POST['video'];
     $titre = $_POST['titre'];
     $description = $_POST['description'];
     $taille = $_POST['taille'];
     $prix = $_POST['prix'];
     $stock = $_POST['stock'];
     $mysqli = new mysqli('localhost', 'root', '', 'boutique-en-ligne');
-    $mysqli->query("UPDATE produit SET reference='$reference', categorie='$categorie', sous_categorie='$sous_categorie', photo='$photo', video='$video',  titre='$titre', description='$description', taille= '$taille', prix= '$prix', stock= '$stock' WHERE id_produit=$id_produit");
+    $mysqli->query("UPDATE produit SET reference='$reference', categorie='$categorie', sous_categorie='$sous_categorie', photo='$photo', titre='$titre', description='$description', taille= '$taille', prix= '$prix', stock= '$stock' WHERE id_produit=$id_produit");
 
     $_SESSION['message'] = "Les infos sont belles est bien modifiées";
     $_SESSION['msg_type'] = "warning";
