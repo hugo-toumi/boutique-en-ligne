@@ -1,6 +1,9 @@
 <?php
 
-require('init.inc.php');
+require_once("init.inc.php");
+require_once("Model_user.php");
+$root = new User();
+
 include 'connect.php';
 
 if (isset($_POST['connexion'])) {
@@ -14,19 +17,18 @@ if (isset($_POST['connexion'])) {
     }
 
     if (!empty($email) and !empty($mdp)) {
-        $requser = $bdd->prepare("SELECT id_membre, email, mdp FROM membre WHERE email =:email");
-        $requser->setFetchMode(PDO::FETCH_ASSOC);
-        $requser->execute(['email' => $email]);
-        $user = $requser->fetch();
+
+        $user = $root->FindUser($email);
+        var_dump($user);
 
         if($user) {
-            $mdp_bdd = $user['mdp'];
+            $mdp_bdd = $user[0]['mdp'];
 
 
             if (password_verify($mdp, $mdp_bdd)) {
-                $_SESSION['email'] = $user['email'];
-                $_SESSION['mdp'] = $user['mdp'];
-                $_SESSION['membre'] = $user['id_membre'];
+                $_SESSION['email'] = $user[0]['email'];
+                $_SESSION['mdp'] = $user[0]['mdp'];
+                $_SESSION['id_membre'] = $user[0]['id_membre'];
 
                 header('Location: index.php?succes=true');  
             } else {

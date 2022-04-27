@@ -15,7 +15,9 @@ $prix ="";
 $quantite= "";
 $panier= "";
 $select= "";
-$option= "";
+$option="";
+$stock="";
+
 
 
 
@@ -35,30 +37,26 @@ $h1 .= "<h1 class='titre-jeu'>$produit[titre]</h1><br>";
             $prix .= "<h3 class ='prix'> Prix : $produit[prix] €</h3><br>";
 
     
-    if($produit['stock'] > 0){
-
-                $contenu .= "<i>Nombre de produit(s) disponible : $produit[stock] </i><br><br>";
-                $contenu .= '<form method="post" action="panier.php">'; 
-
-                $panier .= '<input class="panier" type="submit" name="ajout_panier" value="Ajouter au panier !">';
-                $quantite .= '<label class="quantite" for="quantite">Quantité : </label>';
-                $select .= '<select class="quantite" name="quantite">';
-               
-        
-                for($i = 1; $i <= $produit['stock'] && $i <= 5; $i++)
-                {
-                    $option .= "<option class='option'>$i</option>";
-                }
-
-                $contenu .= '</select>';
+            if($produit['stock'] > 0)
+            {
+                $stock .= "<i>Nombre d'produit(s) disponible : $produit[stock] </i><br><br>";
+                $contenu .= '<form method="post" action="panier.php">';
+                    $contenu .= "<input type='hidden' name='id_produit' value='$produit[id_produit]'>";
+                    $quantite .= '<label for="quantite">Quantité : </label>';
+                    $contenu .= '<select id="quantite" name="quantite">';
+                        for($i = 1; $i <= $produit['stock'] && $i <= 5; $i++)
+                        {
+                            $contenu .= "<option>$i</option>";
+                        }
+                    $contenu .= '</select>';
+                    $contenu .= '<input type="submit" class="panier" name="ajout_panier" value="Ajouter au panier">';
                 $contenu .= '</form>';
-
-                } else {
-                    $contenu .= 'Rupture de stock !';
-                }
-
-$contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>Retour vers la séléction de " . $produit['categorie'] . "</a>";
-
+            }
+            else
+            {
+                $contenu .= 'Rupture de stock !';
+            }
+            $contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>Retour vers la séléction de " . $produit['categorie'] . "</a>";
 
 
 //--------------------------------- AFFICHAGE HTML ---------------------------------//
@@ -78,6 +76,7 @@ $contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>
 </head>
 <body>
     
+<!-- JEUX ICONIQUE -->
 
         <?php echo $h1 ;?>
 
@@ -93,9 +92,17 @@ $contenu .= "<br><a href='boutique.php?categorie=" . $produit['categorie'] . "'>
             <?php echo $prix ;?>
         </div>
 
-        <div class="othertrois">
-            <?php echo $panier ; echo $quantite ; echo $select ; ?>
+        <div class="quantite-select-option">
+            <?php echo $quantite ; echo $select ; echo $option ; ?>
         </div>
+
+        
+        <div class="stock">
+            <?php echo $stock ;?>
+        </div>
+
+<!-- JEUX DU MOMENTS -->
+
 
 </body>
 </html>

@@ -15,16 +15,15 @@ $stock = '';
 require('connect.php');
 
 if (isset($_POST['save'])) {
-    $reference = $_POST['reference'];
-    $categorie = $_POST['categorie'];
-    $sous_categorie = $_POST['sous_categorie'];
-    $photo = $_POST['photo'];
-    $video = $_POST['video'];
-    $titre = $_POST['titre'];
-    $description = $_POST['description'];
-    $taille = $_POST['taille'];
-    $prix = $_POST['prix'];
-    $stock = $_POST['stock'];
+    $reference = htmlspecialchars($_POST['reference']);
+    $categorie = htmlspecialchars($_POST['categorie']);
+    $sous_categorie = htmlspecialchars($_POST['sous_categorie']);
+    $photo = htmlspecialchars($_POST['photo']);
+    $titre = htmlspecialchars($_POST['titre']);
+    $description = htmlentities($_POST['description']);
+    $taille = htmlspecialchars($_POST['taille']);
+    $prix = htmlspecialchars($_POST['prix']);
+    $stock = htmlspecialchars($_POST['stock'])  ;
     $mysqli = new mysqli('localhost', 'root', '', 'boutique-en-ligne');
     $mysqli->query("INSERT INTO produit (id_produit, reference, categorie, sous_categorie, photo, video, titre, description, taille, prix, stock) VALUES('$id_produit', '$reference', '$categorie', '$sous_categorie', '$photo', '$video','$titre','$description', '$taille', '$prix', '$stock')");
 
@@ -85,4 +84,6 @@ if (isset($_POST['update'])) {
 
     header('location: adminprod.php');
 }
+
+
 

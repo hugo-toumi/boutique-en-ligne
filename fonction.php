@@ -29,7 +29,7 @@ function debug($var, $mode = 1)
 //------------------------------------
 function internauteEstConnecte()
 { 
-    if(!isset($_SESSION['membre'])) return false;
+    if(!isset($_SESSION['id_membre'])) return false;
     else return true;
 }
 //------------------------------------

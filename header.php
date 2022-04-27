@@ -62,8 +62,9 @@
                             <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
                             <a href="profil.php">MON PROFIL</a></li>
 
-                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+                           
+                            <li class="lidroite"><i class="fa-solid fa-shop" style="color:#0DA5E6"></i> <!-- Icon BOUTIQUE-->
+                            <a href="boutique.php">BOUTIQUE</a></li>
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
                             <a href="panier.php">PANIER</a></li>
@@ -82,8 +83,8 @@
                             <li class="lidroite"><i class="fa-solid fa-user" style="color:#0DA5E6"></i>  <!-- Icon USER-->
                             <a href="inscription.php">INSCRIPTION | </a><a href="connexion.php">CONNEXION</a></li>
 
-                            <li class="lidroite"><i class="fa-solid fa-feather-pointed" style="color:#0DA5E6"></i> <!-- Icon PLUME-->
-                            <a href="histoire.php">NOTRE HISTOIRE</a></li>
+                            <li class="lidroite"><i class="fa-solid fa-shop" style="color:#0DA5E6"></i> <!-- Icon BOUTIQUE-->
+                            <a href="boutique.php">BOUTIQUE</a></li>    
 
                             <li class="lidroite"><i class="fa-solid fa-cart-shopping" style="color:#0DA5E6"></i> <!-- Icon PANIER-->
                             <a href="panier.php">PANIER</a></li>
@@ -101,13 +102,13 @@
     <nav class="navcons">
             <div class="consoles"> 
                
-                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Playstation"></p><img class="imageconsole" src="https://img.icons8.com/color/48/000000/play-station.png"/>Playstation</a>
+                <p class="pcons"></p><a class='aconsole' href="http://localhost/Gameland/boutique.php?categorie=Playstation"></p><img class="imageconsole" src="https://img.icons8.com/color/48/000000/play-station.png"/>Playstation</a>
                 
-                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Xbox"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/xbox.png"/>Xbox</a>
+                <p class="pcons"></p><a a class='aconsole' href="http://localhost/Gameland/boutique.php?categorie=Xbox"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/xbox.png"/>Xbox</a>
 
-                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=PC"><img class="imageconsole" src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-pc-computer-xnimrodx-lineal-color-xnimrodx.png"/>PC</a>
+                <p class="pcons"></p><a a class='aconsole' href="http://localhost/Gameland/boutique.php?categorie=PC"><img class="imageconsole" src="https://img.icons8.com/external-xnimrodx-lineal-color-xnimrodx/64/000000/external-pc-computer-xnimrodx-lineal-color-xnimrodx.png"/>PC</a>
             
-                <p class="pcons"></p><a href="http://localhost/Gameland/boutique.php?categorie=Nintendo"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/nintendo-switch.png"/>Nintendo</a>
+                <p class="pcons"></p><a a class='aconsole' href="http://localhost/Gameland/boutique.php?categorie=Nintendo"><img class="imageconsole" src="https://img.icons8.com/fluency/48/000000/nintendo-switch.png"/>Nintendo</a>
 
             </div>
         </nav>

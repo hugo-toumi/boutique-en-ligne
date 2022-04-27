@@ -1,12 +1,11 @@
 body{
     background-image: url("../img/fiche.jpg");
-    /* background-image: cover; */
     }
 
 
 .titre-jeu {
 margin-top:4%;
-margin-left: 15%;
+margin-left: 18%;
 text-align: center;
 font-size:40px;
 text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 1px 1px 10px #000;
@@ -16,7 +15,7 @@ color:#3c00ff;
 
 .trois {
 text-align:center;
-margin-left:15%;
+margin-left:20%;
 margin-top: 2%;
 color:white;
 }
@@ -27,10 +26,11 @@ margin-bottom: 2%;
 
 .souscat {
 margin-bottom: 2%;
+
 }
 
 .giga {
-margin-bottom: 2%;
+margin-bottom: 5%;
 }
 
 
@@ -41,10 +41,13 @@ display: flex;
 .description {
 text-shadow: -1px -1px 0 rgb(18, 8, 196), 1px -1px 0 rgb(32, 21, 158), -1px 1px 0 rgb(20, 37, 169), 1px 1px 0 rgb(23, 16, 142), 1px 1px 10px #767676;
 color: rgb(255, 255, 255);
-font-size: 27.5px;
-margin-left: 5%;
+font-size: 20px;
 margin-top: 2%;
-font-family: 'Roboto';
+font-family: 'Arial';
+margin: 0 5% ;
+text-align: center;
+
+
 }
 
 .imagegta {
@@ -53,29 +56,41 @@ box-shadow: 0 5px 20px 3px rgba(255, 255, 255, 0.6);
 height: 230;
 width: 230px;
 margin-left: 8%;
-margin-top: -13%;
+margin-top: -15%;
+box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+border: 1px solid #ffffff;
+outline: none;
+border-color: #012ffe;
+box-shadow: 0 0 30px #012ffe;
 }
+
+
+
+
 
 
 .prix {
 font-size: 30px;
 text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 1px 1px 10px #000;
 color:#ff0000;
-margin-left: 55%;
-margin-top: 2%;
+margin-left: 58%;
+margin-top: 5%;
 }
 
 .stock {
-color: rgb(0, 235, 20);
+color: rgb(22, 168, 34);
+margin-left: 33%;
 }
 
 
-.othertdoo
+
 
 .quantite {
 color:#ff0000;
 font-size: 20px;
 text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255), 1px 1px 10px #000;
+margin-top: 5%;
+
 }
 
 .option {
@@ -83,10 +98,9 @@ text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px
     text-align: center;
 }
 
-
 .panier {
-    padding: 10px;
-    font-size: 21px;
+    padding: 5px;
+    font-size: 20px;
     border-width: 3px;
     border-color: #fff;
     background-color: #ff0000;
@@ -95,8 +109,29 @@ text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px
     border-radius: 50px;
     box-shadow: 1px 2px 17px rgba(255, 255, 255, 0.96);
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 0);
-    
+    margin-left: 10%;
+    width: 27%;
 }
+
+  
+.panier:hover { 
+    transform: scale(1.2, 1.2);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  .panier { 
+    transition: 0.8s;
+  }
 .panier:focus {
     outline:none;
 }
+
+
+.quantite-select-option {
+    margin-left: 45%;
+    margin-top: -7%;
+}
+
+
+
