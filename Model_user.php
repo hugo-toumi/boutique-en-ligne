@@ -12,7 +12,7 @@ class User {
 
     public function FindUser($email){
 
-        $query = $this->pdo->prepare("SELECT id_membre, email, mdp FROM membre WHERE email = '$email'");
+        $query = $this->pdo->prepare("SELECT id_membre, email, mdp, statut FROM membre WHERE email = '$email'");
         $query->setFetchMode(PDO::FETCH_ASSOC);
         $query->execute();
         $user = $query->fetchall();

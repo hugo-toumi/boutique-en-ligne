@@ -19,7 +19,6 @@ if (isset($_POST['connexion'])) {
     if (!empty($email) and !empty($mdp)) {
 
         $user = $root->FindUser($email);
-        var_dump($user);
 
         if($user) {
             $mdp_bdd = $user[0]['mdp'];
@@ -30,7 +29,11 @@ if (isset($_POST['connexion'])) {
                 $_SESSION['mdp'] = $user[0]['mdp'];
                 $_SESSION['id_membre'] = $user[0]['id_membre'];
 
-                header('Location: index.php?succes=true');  
+                if($user[0]['statut'] == "1447") {
+                    header('Location: admin.php');  
+                } else {
+                    header('Location: index.php?succes=true');  
+                }
             } else {
                 $erreur = "Email ou Mot de passe incorrect !";
             }
